@@ -1,0 +1,20 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "dev frontend for labru project",
+  "main": "index.js",
+  "author": "Elmar Bruckmann",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/powlsn/frontend.git"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0"
+  }
+}
