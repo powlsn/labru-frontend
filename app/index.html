@@ -1,18 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>a new paragraph</p>
-    <ul>
-        <li>
-            new list item
-        </li>
-    </ul>
+  <!-- ============= Navbar ============= -->
+  <header>
+    <nav>
+      <div>
+        <a href="#home">
+          <img
+            src="images/logo.png"
+            alt="Logo"
+          />
+        </a>
+        <button type="button" aria-controls="navbar-toggle"
+        >
+          <span></span>
+        </button>
+        <div>
+          <ul>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#news">Aktuelles</a>
+            </li>
+            <li>
+              <a href="#events">Feierlichkeiten</a>
+            </li>
+            <li>
+              <a href="#gallery">Galerie</a>
+            </li>
+            <li>
+              <a href="#contact">Kontakt</a>
+            </li>
+          </ul>
+          <!-- navbar-nav -->
+        </div>
+        <!-- navbar-collapse -->
+      </div>
+      <!-- container -->
+    </nav>
+    <!-- Ende Navigation -->
+  </header>
+
+  <!-- ============= Hero ============= -->
+  <section id="home">
+    <div>
+      <div>
+        <img src="./assets/images/hero.jpg" alt="Hero Image">
+        <div>
+          <h1>Herzlich Willkommen</h1>
+          <p>
+            im besonderen Ambiente auf unserem Anwesen am Ortsrand von Saerbeck.
+          <br>
+            Gönnen Sie sich ein paar erholsame Stunden mit idyllischem Ausblick auf die Ems-Auen und lassen sich von uns mit Kaffee und Kuchen oder einem unserer zahlreichen Kaltgetränke verwöhnen.
+          </p>
+          <p>
+            Wir freuen uns, Sie auf unserem Anwesen bald begrüßen zu dürfen!
+          </p>
+          <a href="#ueber-uns" role="button">
+            <small>
+              <span>Lets Go</span>
+            </small>
+          </a>
+        </div>
+        <!-- col -->
+      </div>
+      <!-- row -->
+    </div>
+    <!-- container -->
+  </section>
+  <!-- Ende Hero -->
+
+  <!-- ============= Aktuelles ============= -->
+  <section id="aktuelles">
+    <div>
+      <div>
+        <h1>News</h1>
+      </div>
+      <div>
+        <div>
+          <div>
+            <h3>Aktuell nix neues</h3>
+            <p>Saturday, 17th August</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+              penatibus et magnis dis parturi ent montes, nascetur ridiculus
+              mus.
+            </p>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Ende Aktuelles -->
+
+  <!-- ============= Events ============= -->
+  <section id="events">
+    <div>
+      <img src="./assets/images/events.jpg" alt="Events">
+      <div>
+        <div>
+          <h1>
+            Feiern Sie bei Uns!
+          </h1>
+          <p>
+            Sie haben etwas zu feiern und suchen den richtigen Rahmen?
+          </p>
+          <p>
+            Dann sind Sie bei uns genau richtig!
+          </p>
+          <p>
+            Unser Eventhaus bietet Ihnen die Möglichkeit mit bis zu 60
+            Personen zu feiern.
+          </p>
+          <p>
+            Ob <em>Hochzeit</em>, <em>Geburtstag</em> oder
+            <em>Betriebsfest</em>, jede Feier wird nach Ihren Wünschen
+            ausgerichtet. Wir freuen uns, mit Ihnen gemeinsam ein
+            individuelles Angebot nach Ihren Wünschen zu erstellen um Ihre
+            private Feier zu einem unvergesslichem Erlebnis zu machen.
+          </p>
+          <p>
+            Besuchen Sie uns und machen sich selbst ein Bild vom herrlichen
+            Ambiente auf unserem Anwesen.
+          </p>
+          <p>
+            Wir freuen uns auf Sie!
+          </p>
+        </div>
+        <!-- col -->
+      </div>
+      <!-- row -->
+    </div>
+    <!-- container -->
+  </section>
+  <!-- Ende Events -->
+
+  <!-- ============= Galerie ============= -->
+  <section id="gallery">
+    <div>
+      <div>
+        <h1>Gallery</h1>
+      </div>
+      <div>
+        <div>
+          <a href="./assets/images/gallery/gallery1.jpg">
+            <img src="./assets/images/gallery/gallery1.jpg" />
+          </a>
+        </div>
+        <div>
+          <a href="./assets/images/gallery/gallery2.jpg">
+            <img src="./assets/images/gallery/gallery2.jpg" />
+          </a>
+        </div>
+        <div>
+          <a href="./assets/images/gallery/gallery3.jpg">
+            <img src="./assets/images/gallery/gallery3.jpg" />
+          </a>
+        </div>
+        <div>
+          <a href="./assets/images/gallery/gallery4.jpg">
+            <img src="./assets/images/gallery/gallery4.jpg" />
+          </a>
+        </div>
+        <div>
+          <a href="./assets/images/gallery/gallery5.jpg">
+            <img src="./assets/images/gallery/gallery5.jpg" />
+          </a>
+        </div>
+        <div>
+          <a href="./assets/images/gallery/gallery6.jpg">
+            <img src="./assets/images/gallery/gallery6.jpg" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Ende Galerie -->
+
+  <!-- ============= Kontakt ============= -->
+  <section id="contact">
+    <div>
+      <div>
+        <img src="./assets/images/kontakt.jpg" alt="Kontakt">
+        <div>
+          <h1>Kontaktieren Sie uns</h1>
+        </div>
+        <form>
+          <div>
+            <div>
+              <div>
+                <input type="text" placeholder="Name" />
+              </div>
+              <div>
+                <input type="email" placeholder="Email" />
+              </div>
+            </div>
+            <div>
+              <div>
+                <input type="text" placeholder="Phone" />
+              </div>
+              <div>
+                <input type="text" placeholder="Subject" />
+              </div>
+            </div>
+            <div>
+              <div>
+                <textarea placeholder="Special Requests" rows="6"></textarea>
+              </div>
+              <button type="submit">Senden</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- Ende Kontakt -->
+
+  <footer id="subfooter">
+    <div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div id="googlemap"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p>
+            <span></span> Oeffnungszeiten
+          </p>
+          <p>Montags : geschlossen</p>
+          <p>Dienstag - Donnerstag : 14:00 - 18:00 Uhr</p>
+          <p>Freitags : geschlossen</p>
+          <p>Samstag - Sonntag : 14:00 - 18:00 Uhr</p>
+        </div>
+        <div>
+          <p>
+            <span></span> Anschrift
+          </p>
+          <p>48369, Saerbeck</p>
+          <p>+49 888 455 6677</p>
+          <p>mail@example.com</p>
+          <br>
+          <p>
+            Social Links:
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <footer id="footer">
+    <div>
+      <div>
+        <div>
+          <p>
+            Created by Elmar Bruckmann and hosted by
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
