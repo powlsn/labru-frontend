@@ -1,0 +1,27 @@
+FRONTEND:
+1. setup gulp tasks for dev.
+    - https://gulpjs.com/docs/en/getting-started/using-plugins
+    - browser sync on any file save.
+    - combine and modernize css on save/tasks (watch css .pipe with plugins)
+    - combine and modernize js on save/tasks (watch js .pipe with plugins)
+
+2. get bootstrap4 to work.
+3. get fontawesome to work. also within the package manager
+4. get icons/sprites/svg task to work
+5. get a todolist for backend developement. like images (big, medium, small)
+
+
+BACKEND:
+1. update to python 3.x
+2. update to django 1.11.x or 2.2? (see webfaction support)
+3. refactor apps (cookiecutter projekt layout)
+4. Apps ToDo:
+    - aktuelles rework
+    integration: logging, messages framework, image (for the future more usability to write)
+    - gallery
+    a whole new conzept :-/
+    - app => pages/sections
+    rewrite the main app to support the new conzept of the page
+        like opentime, entrys, etc.
+    rewrite kontakt
+        to support messages framework, and logging
