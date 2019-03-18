@@ -1,0 +1,43 @@
+.large-hero {
+    position: relative;
+    /* display: block; */
+    box-shadow: 0 10px $darkGreen;
+
+    &__text-content {
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__title {
+        font-family: 'Courgette', cursive;
+        font-weight: 300;
+        font-size: 4rem;
+        color: $darkGreen;
+        margin: 0;
+        text-shadow: 1px 1px 0 rgba(250, 250, 250, 0.7);
+    }
+    &__subtitle {
+        font-family: 'Courgette', cursive;
+        font-weight: 300;
+        font-size: 1.6rem;
+        color: #fff;
+        margin: 0;
+        /* text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5); */
+    }
+
+    &__text {
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+        max-width: 30rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        transform: translateX(-10%);
+    }
+}

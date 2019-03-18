@@ -1,0 +1,17 @@
+.btn {
+    background-color: $mediumGreen;
+    color: #fff;
+    text-decoration: none;
+    padding: .75rem 1.2rem;
+    display: inline-block;
+    border-radius: 0.625rem;
+
+    &--large {
+        font-size: 1.2rem;
+        padding: 1.1rem 1.9rem;
+    }
+
+    &--brown {
+        background-color: $mediumBrown;
+    }
+}
