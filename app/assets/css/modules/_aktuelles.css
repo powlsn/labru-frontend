@@ -1,0 +1,26 @@
+.aktuelles {
+
+    &__title {
+        font-family: 'Courgette', cursive;
+        font-weight: 300;
+        font-size: 2.8rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    &__subtitle {
+        font-family: 'Courgette', cursive;
+        font-weight: 300;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    &__content {
+        line-height: 1.35;
+        
+        &--small {
+            font-size: 0.875rem;
+            float: right;
+        }
+    }
+}

@@ -23,12 +23,18 @@ const paths = {
     src: 'app/index.html'
   },
   css: {
-    src: 'app/assets/css/styles.css',
-    dest: 'app/dist/css/'
+    src: 'app/assets/css/*.css',
+    dest: 'app/temp/css/'
+  },
+  sass: {
+    src: 'app/assets/sass/vendor.scss',
+    dest: 'app/assets/css/'
   },
   cssWatch: {
-    src: 'app/assets/css/**/*.css',
-    dest: 'app/dist/css/'
+    src: 'app/assets/css/**/*.css'
+  },
+  sassWatch: {
+    src: 'app/assets/sass/**/*.scss'
   },
   js: {
     src: '',
@@ -36,14 +42,31 @@ const paths = {
   }
 }
 
-const clean = () => del(['app/dist']);
+const clean = () => del(['app/temp']);
 
+// ### --- SASS TASK --- ###
+function sassCompile() {
+  return gulp.src(paths.sass.src)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(paths.sass.dest));
+}
+// ### --- SASS TASK END --- ###
+
+
+// ### --- CSS TASK --- ###
 function styles() {
   return gulp.src(paths.css.src)
     .pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
+    .on('error', function (error) {
+      console.log(error.toString());
+      this.emit('end');
+    })
     .pipe(gulp.dest(paths.css.dest));
 }
+// ### --- CSS TASK END --- ###
 
+
+// ### --- BROWSER SYNC --- ###
 function reload(done) {
   server.reload();
   done();
@@ -57,11 +80,15 @@ function serve(done) {
   });
   done();
 }
+// ### --- BROWSER SYNC END --- ###
 
-function watch() {
+
+// ### --- WATCH TASK --- ###
+function watchFiles() {
+  gulp.watch(paths.sassWatch.src, sassCompile);
   gulp.watch(paths.cssWatch.src, gulp.series(styles, reload));
   gulp.watch(paths.html.src, reload);
 }
+// ### --- WATCH TASK END --- ###
 
-const dev = gulp.series(clean, styles, serve, watch);
-exports.dev = dev;
+exports.watch = gulp.series(clean, sassCompile, styles, serve, watchFiles);

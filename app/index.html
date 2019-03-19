@@ -7,7 +7,8 @@
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 
-  <link rel="stylesheet" href="./dist/css/styles.css">
+  <link rel="stylesheet" href="./temp/css/vendor.css">
+  <link rel="stylesheet" href="./temp/css/styles.css">
 </head>
 <body>
   <!-- ============= Navbar ============= -->
@@ -69,23 +70,20 @@
   <!-- Ende Hero -->
 
   <!-- ============= Aktuelles ============= -->
-  <section id="aktuelles">
-    <div>
-      <div>
-        <h1>News</h1>
-      </div>
-      <div>
-        <div>
-          <div>
-            <h3>Aktuell nix neues</h3>
-            <p>Saturday, 17th August</p>
-            <p>
+  <section id="news">
+    <div class="wrapper">
+      <h1 class="aktuelles__title">Aktuelles</h1>
+      <div class="container aktuelles">
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <h3 class="aktuelles__subtitle">Aktuell nix neues</h3>
+            <p class="aktuelles__content">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Aenean massa. Cum sociis natoque
               penatibus et magnis dis parturi ent montes, nascetur ridiculus
               mus.
             </p>
-            <br>
+            <p class="aktuelles__content aktuelles__content--small">Saturday, 17th August</p>
           </div>
         </div>
       </div>
@@ -95,82 +93,80 @@
 
   <!-- ============= Events ============= -->
   <section id="events">
-    <div>
+    <div class="events">
       <img src="./assets/images/events.jpg" alt="Events">
-      <div>
-        <div>
-          <h1>
-            Feiern Sie bei Uns!
-          </h1>
-          <p>
-            Sie haben etwas zu feiern und suchen den richtigen Rahmen?
-          </p>
-          <p>
-            Dann sind Sie bei uns genau richtig!
-          </p>
-          <p>
-            Unser Eventhaus bietet Ihnen die Möglichkeit mit bis zu 60
-            Personen zu feiern.
-          </p>
-          <p>
-            Ob <em>Hochzeit</em>, <em>Geburtstag</em> oder
-            <em>Betriebsfest</em>, jede Feier wird nach Ihren Wünschen
-            ausgerichtet. Wir freuen uns, mit Ihnen gemeinsam ein
-            individuelles Angebot nach Ihren Wünschen zu erstellen um Ihre
-            private Feier zu einem unvergesslichem Erlebnis zu machen.
-          </p>
-          <p>
-            Besuchen Sie uns und machen sich selbst ein Bild vom herrlichen
-            Ambiente auf unserem Anwesen.
-          </p>
-          <p>
-            Wir freuen uns auf Sie!
-          </p>
-        </div>
-        <!-- col -->
+      <div class="events__text-content">
+        <h1 class="events__title">
+          Feiern Sie bei Uns!
+        </h1>
+        <p class="events__text">
+          Sie haben etwas zu feiern und suchen den richtigen Rahmen?
+        </p>
+        <p class="events__text">
+          Dann sind Sie bei uns genau richtig!
+        </p>
+        <p class="events__text">
+          Unser Eventhaus bietet Ihnen die Möglichkeit mit bis zu 60
+          Personen zu feiern.
+          Ob <em>Hochzeit</em>, <em>Geburtstag</em> oder
+          <em>Betriebsfest</em>, jede Feier wird nach Ihren Wünschen
+          ausgerichtet. Wir freuen uns, mit Ihnen gemeinsam ein
+          individuelles Angebot nach Ihren Wünschen zu erstellen um Ihre
+          private Feier zu einem unvergesslichem Erlebnis zu machen.
+        </p>
+        <p class="events__text">
+          Besuchen Sie uns und machen sich selbst ein Bild vom herrlichen
+          Ambiente auf unserem Anwesen.
+        </p>
+        <p class="events__text">
+          Wir freuen uns auf Sie!
+        </p>
       </div>
-      <!-- row -->
     </div>
-    <!-- container -->
   </section>
   <!-- Ende Events -->
 
   <!-- ============= Galerie ============= -->
   <section id="gallery">
-    <div>
-      <div>
-        <h1>Gallery</h1>
-      </div>
-      <div>
+    <div class="galerie">
+      <div class="wrapper">
+
         <div>
-          <a href="./assets/images/gallery/gallery1.jpg">
-            <img src="./assets/images/gallery/gallery1.jpg" />
-          </a>
+          <h1 class="galerie__title">Gallery</h1>
         </div>
-        <div>
-          <a href="./assets/images/gallery/gallery2.jpg">
-            <img src="./assets/images/gallery/gallery2.jpg" />
-          </a>
-        </div>
-        <div>
-          <a href="./assets/images/gallery/gallery3.jpg">
-            <img src="./assets/images/gallery/gallery3.jpg" />
-          </a>
-        </div>
-        <div>
-          <a href="./assets/images/gallery/gallery4.jpg">
-            <img src="./assets/images/gallery/gallery4.jpg" />
-          </a>
-        </div>
-        <div>
-          <a href="./assets/images/gallery/gallery5.jpg">
-            <img src="./assets/images/gallery/gallery5.jpg" />
-          </a>
-        </div>
-        <div>
-          <a href="./assets/images/gallery/gallery6.jpg">
-            <img src="./assets/images/gallery/gallery6.jpg" />
-          </a>
+        <div class="container">
+          <div class="card-columns">
+            <div class="card card-columns__card">
+              <a href="./assets/images/gallery/gallery1.jpg">
+                <img src="./assets/images/gallery/gallery1.jpg" />
+              </a>
+            </div>
+            <div class="card card-columns__card">
+              <a href="./assets/images/gallery/gallery2.jpg">
+                <img src="./assets/images/gallery/gallery2.jpg" />
+              </a>
+            </div>
+            <div class="card card-columns__card">
+              <a href="./assets/images/gallery/gallery3.jpg">
+                <img src="./assets/images/gallery/gallery3.jpg" />
+              </a>
+            </div>
+            <div class="card card-columns__card">
+              <a href="./assets/images/gallery/gallery4.jpg">
+                <img src="./assets/images/gallery/gallery4.jpg" />
+              </a>
+            </div>
+            <div class="card card-columns__card">
+              <a href="./assets/images/gallery/gallery5.jpg">
+                <img src="./assets/images/gallery/gallery5.jpg" />
+              </a>
+            </div>
+            <div class="card card-columns__card">
+              <a href="./assets/images/gallery/gallery6.jpg">
+                <img src="./assets/images/gallery/gallery6.jpg" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
