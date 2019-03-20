@@ -31,12 +31,12 @@ Core mixins -- and required dependencies
    Core CSS
    -------------------------------------------------------- */
 
-// @import "../../../node_modules/bootstrap/scss/reboot";
+@import "../../../node_modules/bootstrap/scss/reboot";
 // @import "../../../node_modules/bootstrap/scss/type";
 // @import "../../../node_modules/bootstrap/scss/images";
 // @import "../../../node_modules/bootstrap/scss/code";
 @import "../../../node_modules/bootstrap/scss/grid";
-//@import "../../../node_modules/bootstrap/scss/tables";
+// @import "../../../node_modules/bootstrap/scss/tables";
 @import "../../../node_modules/bootstrap/scss/forms";
 @import "../../../node_modules/bootstrap/scss/buttons";
 

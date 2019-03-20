@@ -1,0 +1,29 @@
+.subfooter {
+
+    &__title {
+        font-family: 'Courgette', cursive;
+        font-weight: 300;
+        font-size: 1.8rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 1.125rem;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__content-header {
+        margin-bottom: .5rem;
+    }
+
+    &__content-text {
+        &--center {
+            text-align: center;
+        }
+        
+    }
+}

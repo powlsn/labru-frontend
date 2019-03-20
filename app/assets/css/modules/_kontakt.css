@@ -1,15 +1,15 @@
-.events {
-    background: url('../../assets/images/events.jpg') 50% 0 fixed no-repeat;
+.contact {
+    background: url('../../assets/images/kontakt.jpg') 50% 0 fixed no-repeat;
     height: 100%;
     background-size: cover;
     display: block;
 
-    &__section-header {
-        margin-bottom: 1.5rem;
-    }
-
     &__text-content {
         color: #fff;
+    }
+
+    &__section-header {
+        margin-bottom: 1.5rem;
     }
 
     &__title {
@@ -18,13 +18,19 @@
         font-size: 2.8rem;
         margin: 0;
         text-align: center;
-        color: #fff;
     }
 
     &__text {
         color: #fff;
         font-weight: 300;
+        margin-left: auto;
+        margin-right: auto;
         text-align: justify;
+        max-width: 50rem;
         line-height: 1.35;
+    }
+
+    &__message-box {
+        resize: none;
     }
 }

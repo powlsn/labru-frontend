@@ -1,5 +1,9 @@
 .aktuelles {
 
+    &__section-header {
+        margin-bottom: 1.5rem;
+    }
+
     &__title {
         font-family: 'Courgette', cursive;
         font-weight: 300;

@@ -7,5 +7,16 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  filter: brightness(75%);
+}
+
+.img {
+
+  &--brightness-20 {
+    filter: brightness(80%);
+  }
+  
+}
+
+.d-relative {
+  position: relative;
 }

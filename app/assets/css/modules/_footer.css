@@ -1,0 +1,15 @@
+.footer {
+
+    &__bg-black {
+        background: #000;
+    }
+
+    &__text-center {
+        padding-top: 1.2rem;
+        text-align: center;
+    }
+
+    &__text-white {
+        color: #fff;
+    }
+}
