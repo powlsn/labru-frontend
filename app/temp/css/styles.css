@@ -389,19 +389,34 @@ img {
 .large-hero__title {
         font-family: 'Courgette', cursive;
         font-weight: 300;
-        font-size: 4rem;
-        color: #277e33;
+        font-size: 1.8rem;
+        color: #fff;
         margin: 0;
-        text-shadow: 1px 1px 0 rgba(250, 250, 250, 0.7);
+    }
+
+@media (min-width: 768px) {
+
+.large-hero__title {
+            font-size: 4rem;
+            text-shadow: 1px 1px 0 rgba(250, 250, 250, 0.7)
+    }
     }
 
 .large-hero__subtitle {
         font-family: 'Courgette', cursive;
         font-weight: 300;
-        font-size: 1.6rem;
+        font-size: 1rem;
         color: #fff;
         margin: 0;
-        /* text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5); */
+        padding-bottom: .5rem;
+    }
+
+@media (min-width: 768px) {
+
+.large-hero__subtitle {
+            font-size: 1.6rem;
+            padding-bottom: 0
+    }
     }
 
 .large-hero__text {
@@ -414,6 +429,14 @@ img {
         margin-right: auto;
         text-align: left;
         transform: translateX(-10%);
+        display: none;
+    }
+
+@media (min-width: 768px) {
+
+.large-hero__text {
+            display: block
+    }
     }
 
 .button {
@@ -426,8 +449,16 @@ img {
 }
 
 .button--large {
-        font-size: 1.2rem;
-        padding: 1.1rem 1.9rem;
+        font-size: .75rem;
+        padding: .35rem 1rem;
+    }
+
+@media (min-width: 768px) {
+
+.button--large {
+            font-size: 1.2rem;
+            padding: 1.1rem 1.9rem
+    }
     }
 
 .button--brown {

@@ -2,6 +2,7 @@
 @import "global/_vars";
 @import "global/_base";
 @import "global/_wrapper";
+@import "global/_mixins";
 @import "modules/_hero";
 @import "modules/_button";
 @import "modules/_aktuelles";

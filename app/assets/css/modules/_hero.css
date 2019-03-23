@@ -15,18 +15,27 @@
     &__title {
         font-family: 'Courgette', cursive;
         font-weight: 300;
-        font-size: 4rem;
-        color: $darkGreen;
+        font-size: 1.8rem;
+        color: #fff;
         margin: 0;
-        text-shadow: 1px 1px 0 rgba(250, 250, 250, 0.7);
+
+        @mixin atSmall {
+            font-size: 4rem;
+            text-shadow: 1px 1px 0 rgba(250, 250, 250, 0.7);
+        }
     }
     &__subtitle {
         font-family: 'Courgette', cursive;
         font-weight: 300;
-        font-size: 1.6rem;
+        font-size: 1rem;
         color: #fff;
         margin: 0;
-        /* text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5); */
+        padding-bottom: .5rem;
+
+        @mixin atSmall {
+            font-size: 1.6rem;
+            padding-bottom: 0;
+        }
     }
 
     &__text {
@@ -39,5 +48,10 @@
         margin-right: auto;
         text-align: left;
         transform: translateX(-10%);
+        display: none;
+
+        @mixin atSmall {
+            display: block;
+        }
     }
 }

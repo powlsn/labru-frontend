@@ -6,6 +6,7 @@ const gulp = require("gulp"),
   cssvars = require('postcss-simple-vars'),
   nested = require('postcss-nested'),
   cssImport = require('postcss-import'),
+  mixins = require('postcss-mixins'),
   sass = require('gulp-sass'),
   cleanCSS = require('gulp-clean-css'),
   sourcemaps = require('gulp-sourcemaps'),
@@ -56,7 +57,7 @@ function sassCompile() {
 // ### --- CSS TASK --- ###
 function styles() {
   return gulp.src(paths.css.src)
-    .pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
+    .pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer]))
     .on('error', function (error) {
       console.log(error.toString());
       this.emit('end');
