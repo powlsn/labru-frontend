@@ -1,8 +1,18 @@
 .contact {
-    background: url('../../assets/images/kontakt.jpg') 50% 0 fixed no-repeat;
+    background: url('../../assets/images/kontakt-small.jpg') 50% 0 fixed no-repeat;
     height: 100%;
     background-size: cover;
     display: block;
+
+    @mixin atSmall {
+        background: url('../../assets/images/kontakt-medium.jpg') 50% 0 fixed no-repeat;
+        background-size: cover;
+    }
+
+    @mixin atLarge {
+        background: url('../../assets/images/kontakt-large.jpg') 50% 0 fixed no-repeat;
+        background-size: cover;
+    }
 
     &__text-content {
         color: #fff;
@@ -14,10 +24,22 @@
 
     &__title {
         font-family: 'Courgette', cursive;
-        font-weight: 300;
-        font-size: 2.8rem;
         margin: 0;
         text-align: center;
+        font-weight: 300;
+        font-size: 2rem;
+
+        @mixin atSmall {
+            font-size: 2.25rem;
+        }
+
+        @mixin atMedium {
+            font-size: 2.5rem;
+        }
+
+        @mixin atLarge {
+            font-size: 2.75rem;
+        }
     }
 
     &__text {
@@ -33,4 +55,12 @@
     &__message-box {
         resize: none;
     }
+}
+
+#googlemap {
+    width: 100%;
+    height: 520px;
+    /* width: 100%;
+    height:100%; */
+    background-color: #000;
 }

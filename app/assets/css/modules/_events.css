@@ -1,5 +1,5 @@
 .events {
-    background: url('../../assets/images/events.jpg') 50% 0 fixed no-repeat;
+    background: url('../../assets/images/events-large.jpg') 50% 0 fixed no-repeat;
     height: 100%;
     background-size: cover;
     display: block;
@@ -14,17 +14,32 @@
 
     &__title {
         font-family: 'Courgette', cursive;
-        font-weight: 300;
-        font-size: 2.8rem;
         margin: 0;
         text-align: center;
         color: #fff;
+        font-weight: 300;
+        font-size: 2rem;
+
+        @mixin atSmall {
+            font-size: 2.25rem;
+        }
+
+        @mixin atMedium {
+            font-size: 2.5rem;
+        }
+
+        @mixin atLarge {
+            font-size: 2.75rem;
+        }
     }
 
     &__text {
         color: #fff;
-        font-weight: 300;
-        text-align: justify;
         line-height: 1.35;
+        font-weight: 300;
+
+        @mixin atMedium {
+            font-size: 1.125rem;
+        }
     }
 }

@@ -26,4 +26,26 @@
         }
         
     }
+
+    &__opentime-table {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.125rem;
+        font-weight: 500;
+        table-layout:auto;
+        width: 80%;
+
+    }
+
+    &__opentime-row {
+        
+        &--active {
+            background: $darkGreen;
+            color: #fff;
+        }
+    }
+
+    &__opentime-row td:nth-child(2) {
+        text-align: right;
+    }
 }
