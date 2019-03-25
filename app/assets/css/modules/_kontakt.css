@@ -1,16 +1,16 @@
 .contact {
-    background: url('../../assets/images/kontakt-small.jpg') 50% 0 fixed no-repeat;
+    background: $darkBrown;
     height: 100%;
     background-size: cover;
     display: block;
 
-    @mixin atSmall {
+    @mixin atMedium {
         background: url('../../assets/images/kontakt-medium.jpg') 50% 0 fixed no-repeat;
         background-size: cover;
     }
 
     @mixin atLarge {
-        background: url('../../assets/images/kontakt-large.jpg') 50% 0 fixed no-repeat;
+        background: url("../../assets/images/kontakt-large.jpg") 50% 0 fixed no-repeat;
         background-size: cover;
     }
 
@@ -55,12 +55,21 @@
     &__message-box {
         resize: none;
     }
-}
 
-#googlemap {
-    width: 100%;
-    height: 520px;
-    /* width: 100%;
-    height:100%; */
-    background-color: #000;
+    &__embed-container {
+        margin-top: 1.75rem;
+
+        @mixin atSmall {
+            margin-top:  0;
+        }
+
+        @mixin atMedium {
+            margin-top:  0;
+        }
+    }
+
+    &__google-map {
+        width: 100%;
+        height: 520px;
+    }
 }

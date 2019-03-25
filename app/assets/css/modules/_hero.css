@@ -1,22 +1,30 @@
 .large-hero {
     position: relative;
-    /* display: block; */
-    box-shadow: 0 10px $darkGreen;
+    border-bottom: 10px solid $darkGreen;
+
+    &__image {
+        display: block;
+    }
 
     &__text-content {
+        padding-top: 88px;
         position: absolute;
-        top: 60%;
+        top: 50%;
         transform: translateY(-50%);
         left: 0;
         width: 100%;
         text-align: center;
+
+        @mixin atMedium {
+            padding-top: 60px;
+        }
     }
 
     &__title {
         font-family: 'Courgette', cursive;
         font-weight: 300;
         color: #fff;
-        text-shadow: 2px 2px 0 rgba(39, 126, 51, 0.7);
+        text-shadow: 1px 2px 0 rgba(39, 126, 51, 0.7);
         margin: 0;
 
         @mixin atMedium {
@@ -27,6 +35,7 @@
             font-size: 3rem;
         }
     }
+
     &__subtitle {
         font-family: 'Courgette', cursive;
         color: #fff;

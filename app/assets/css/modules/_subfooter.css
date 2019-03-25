@@ -1,5 +1,17 @@
 .subfooter {
 
+    &__column {
+        padding-top: 2.5rem;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        @mixin atSmall {
+            padding-top: 0;
+        }
+    }
+
     &__title {
         font-family: 'Courgette', cursive;
         font-weight: 300;

@@ -12,20 +12,14 @@
 </head>
 <body>
   <!-- ============= Navbar ============= -->
-  <header>
-    <nav>
-      <div>
-        <a href="#home">
-          <img
-            src="images/logo.png"
-            alt="Logo"
-          />
-        </a>
-        <button type="button" aria-controls="navbar-toggle"
-        >
-          <span></span>
-        </button>
-        <div>
+  <header class="site-header">
+    <div class="container">
+      <div class="site-header__logo">
+        <img src="./assets/images/svg/logo.svg" alt="Logo"/>
+      </div>
+      <div class="site-header__menu-icon"></div>
+      <div class="site-header__menu-content">
+        <nav class="primary-nav primary-nav--pull-right">
           <ul>
             <li>
               <a href="#home">Home</a>
@@ -43,63 +37,61 @@
               <a href="#contact">Kontakt</a>
             </li>
           </ul>
-          <!-- navbar-nav -->
-        </div>
-        <!-- navbar-collapse -->
+        </nav>
       </div>
-      <!-- container -->
-    </nav>
-    <!-- Ende Navigation -->
+    </div>
+    <!-- wrapper -->
   </header>
 
   <!-- ============= Hero ============= -->
   <section id="home">
     <div class="large-hero">
       <picture>
-        <source srcset="assets/images/hero-large.jpg 1920w, assets/images/hero-large-hi.jpg 3840w" media="(min-width: 1380px)">
-        <source srcset="assets/images/hero-medium.jpg 1380w, assets/images/hero-medium-hi.jpg 2760w" media="(min-width: 990px)">
-        <source srcset="assets/images/hero-small.jpg 990w, assets/images/hero-small-hi.jpg 1980w" media="(min-width: 640px)">
-        <img srcset="assets/images/hero-smallest.jpg 640w, assets/images/hero-smallest-hi.jpg 1280w" alt="Coast with Mountain" class="large-hero__image">
+        <source srcset="assets/images/hero-l.jpg 1920w, assets/images/hero-l-hi.jpg 3840w" media="(min-width: 1380px)">
+        <source srcset="assets/images/hero-m.jpg 1380w, assets/images/hero-m-hi.jpg 2760w" media="(min-width: 990px)">
+        <source srcset="assets/images/hero-sm.jpg 990w, assets/images/hero-sm-hi.jpg 1980w" media="(min-width: 640px)">
+        <img srcset="assets/images/hero-sx.jpg 640w, assets/images/hero-sx-hi.jpg 1280w" alt="landhaus bruckmann eventhaus" class="large-hero__image">
       </picture>
+
       <div class="large-hero__text-content">
-        <h1 class="large-hero__title">Herzlich Willkommen</h1>
-        <h2 class="large-hero__subtitle">im besonderen Ambiente am Ortsrand von Saerbeck</h2>
-        <p class="large-hero__text">
-          Wir freuen uns auf Ihren Besuch!
-        </p>
-        <a class="btn button--brown" href="#news">Los Geht's</a>
+        <div class="wrapper">
+          <h1 class="large-hero__title">Herzlich Willkommen</h1>
+          <h2 class="large-hero__subtitle">im besonderen Ambiente am Ortsrand von Saerbeck</h2>
+          <p class="large-hero__text">
+            Wir freuen uns auf Ihren Besuch!
+          </p>
+          <a class="btn button--brown" href="#news">Los Geht's</a>
+        </div>
       </div>
     </div>
   </section>
   <!-- Ende Hero -->
 
   <!-- ============= Aktuelles ============= -->
-  <section id="news">
-    <div class="wrapper">
-      <div class="aktuelles__section-header">
-        <h1 class="aktuelles__title">Aktuelles</h1>
-      </div>
-      <div class="container aktuelles">
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <img src="./assets/images/image8.jpg"/>
-          </div>
-          <div class="col-sm-12 col-md-6">
-              <h2 class="aktuelles__subtitle">Headline for some awesome News</h2>
-            <p class="text-justify aktuelles__content-text" >
-              Lorem Ipsum is simply dummy text of the printing and typesetting 
-              industry. Lorem Ipsum has been the industry's standard dummy 
-              text ever since the 1500s, when an unknown printer took a galley 
-              of type and scrambled it to make a type specimen book. It has 
-              survived not only five centuries, but also the leap into electronic 
-              typesetting, remaining essentially unchanged. It was popularised 
-              in the 1960s with the release of Letraset sheets containing Lorem 
-              Ipsum passages, and more recently with desktop publishing 
-              software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-            <p class="aktuelles__content-text  aktuelles__content-text--small">Saturday, 17th August</p>
-            <a class="button" href="#">Mehr</a>
-          </div>
+  <section id="news" class="page-section">
+    <div class="aktuelles__section-header">
+      <h1 class="aktuelles__title">Aktuelles</h1>
+    </div>
+    <div class="container aktuelles">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <img src="./assets/images/image8.jpg" alt="headline for awesome news"/>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <h2 class="aktuelles__subtitle">Headline for awesome News</h2>
+          <p class="text-justify aktuelles__content-text" >
+            Lorem Ipsum is simply dummy text of the printing and typesetting 
+            industry. Lorem Ipsum has been the industry's standard dummy 
+            text ever since the 1500s, when an unknown printer took a galley 
+            of type and scrambled it to make a type specimen book. It has 
+            survived not only five centuries, but also the leap into electronic 
+            typesetting, remaining essentially unchanged. It was popularised 
+            in the 1960s with the release of Letraset sheets containing Lorem 
+            Ipsum passages, and more recently with desktop publishing 
+            software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+          <p class="aktuelles__content-text  aktuelles__content-text--small">Saturday, 17th August</p>
+          <a class="button" href="#">Mehr</a>
         </div>
       </div>
     </div>
@@ -107,38 +99,36 @@
   <!-- Ende Aktuelles -->
 
   <!-- ============= Events ============= -->
-  <section id="events" class="events">
-    <div class="wrapper">
-      <div class="container">
-        <div class="events__section-header">
-          <h1 class="events__title">Feiern Sie bei Uns!</h1>
-        </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="events__text-content">
-              <p class="events__text">
-                Sie haben etwas zu feiern und suchen den richtigen Rahmen?
-              </p>
-              <p class="events__text">
-                Dann sind Sie bei uns genau richtig!
-              </p>
-              <p class="events__text">
-                Unser Eventhaus bietet Ihnen die Möglichkeit mit bis zu 60
-                Personen zu feiern.
-                Ob <em>Hochzeit</em>, <em>Geburtstag</em> oder
-                <em>Betriebsfest</em>, jede Feier wird nach Ihren Wünschen
-                ausgerichtet. Wir freuen uns, mit Ihnen gemeinsam ein
-                individuelles Angebot nach Ihren Wünschen zu erstellen um Ihre
-                private Feier zu einem unvergesslichem Erlebnis zu machen.
-              </p>
-              <p class="events__text">
-                Besuchen Sie uns und machen sich selbst ein Bild vom herrlichen
-                Ambiente auf unserem Anwesen.
-              </p>
-              <p class="events__text">
-                Wir freuen uns auf Sie!
-              </p>
-            </div>
+  <section id="events" class="events page-section">
+    <div class="container">
+      <div class="events__section-header">
+        <h1 class="events__title">Feiern Sie bei Uns!</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="events__text-content">
+            <p class="events__text">
+              Sie haben etwas zu feiern und suchen den richtigen Rahmen?
+            </p>
+            <p class="events__text">
+              Dann sind Sie bei uns genau richtig!
+            </p>
+            <p class="events__text">
+              Unser Eventhaus bietet Ihnen die Möglichkeit mit bis zu 60
+              Personen zu feiern.
+              Ob <em>Hochzeit</em>, <em>Geburtstag</em> oder
+              <em>Betriebsfest</em>, jede Feier wird nach Ihren Wünschen
+              ausgerichtet. Wir freuen uns, mit Ihnen gemeinsam ein
+              individuelles Angebot nach Ihren Wünschen zu erstellen um Ihre
+              private Feier zu einem unvergesslichem Erlebnis zu machen.
+            </p>
+            <p class="events__text">
+              Besuchen Sie uns und machen sich selbst ein Bild vom herrlichen
+              Ambiente auf unserem Anwesen.
+            </p>
+            <p class="events__text">
+              Wir freuen uns auf Sie!
+            </p>
           </div>
         </div>
       </div>
@@ -147,43 +137,41 @@
   <!-- Ende Events -->
 
   <!-- ============= Galerie ============= -->
-  <section id="gallery" class="galerie">
-    <div class="wrapper">
-      <div class="container">
-        <div class="galerie__section-header">
-          <h1 class="galerie__title">Galerie</h1>
+  <section id="gallery" class="page-section">
+    <div class="container">
+      <div class="galerie__section-header">
+        <h1 class="galerie__title">Galerie</h1>
+      </div>
+      <div class="card-columns">
+        <div class="card card-columns__card">
+          <a href="./assets/images/gallery/gallery1.jpg">
+            <img src="./assets/images/gallery/gallery1.jpg" />
+          </a>
         </div>
-        <div class="card-columns">
-          <div class="card card-columns__card">
-            <a href="./assets/images/gallery/gallery1.jpg">
-              <img src="./assets/images/gallery/gallery1.jpg" />
-            </a>
-          </div>
-          <div class="card card-columns__card">
-            <a href="./assets/images/gallery/gallery2.jpg">
-              <img src="./assets/images/gallery/gallery2.jpg" />
-            </a>
-          </div>
-          <div class="card card-columns__card">
-            <a href="./assets/images/gallery/gallery3.jpg">
-              <img src="./assets/images/gallery/gallery3.jpg" />
-            </a>
-          </div>
-          <div class="card card-columns__card">
-            <a href="./assets/images/gallery/gallery4.jpg">
-              <img src="./assets/images/gallery/gallery4.jpg" />
-            </a>
-          </div>
-          <div class="card card-columns__card">
-            <a href="./assets/images/gallery/gallery5.jpg">
-              <img src="./assets/images/gallery/gallery5.jpg" />
-            </a>
-          </div>
-          <div class="card card-columns__card">
-            <a href="./assets/images/gallery/gallery6.jpg">
-              <img src="./assets/images/gallery/gallery6.jpg" />
-            </a>
-          </div>
+        <div class="card card-columns__card">
+          <a href="./assets/images/gallery/gallery2.jpg">
+            <img src="./assets/images/gallery/gallery2.jpg" />
+          </a>
+        </div>
+        <div class="card card-columns__card">
+          <a href="./assets/images/gallery/gallery3.jpg">
+            <img src="./assets/images/gallery/gallery3.jpg" />
+          </a>
+        </div>
+        <div class="card card-columns__card">
+          <a href="./assets/images/gallery/gallery4.jpg">
+            <img src="./assets/images/gallery/gallery4.jpg" />
+          </a>
+        </div>
+        <div class="card card-columns__card">
+          <a href="./assets/images/gallery/gallery5.jpg">
+            <img src="./assets/images/gallery/gallery5.jpg" />
+          </a>
+        </div>
+        <div class="card card-columns__card">
+          <a href="./assets/images/gallery/gallery6.jpg">
+            <img src="./assets/images/gallery/gallery6.jpg" />
+          </a>
         </div>
       </div>
     </div>
@@ -191,32 +179,32 @@
   <!-- Ende Galerie -->
 
   <!-- ============= Kontakt ============= -->
-  <section id="contact" class="contact">
-    <div class="wrapper">
-      <div class="container contact__text-content">
-        <div class="contact__section-header">
-          <h2 class="contact__title">Schreiben Sie uns</h2>
+  <section id="contact" class="contact page-section">
+    <div class="container contact__text-content">
+      <div class="contact__section-header">
+        <h2 class="contact__title">Schreiben Sie uns</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <form>
+            <div class="form-group">
+              <input type="email" class="form-control" id="form-name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="form-email" placeholder="Email Adresse">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="form-subject" placeholder="Betreff">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control contact__message-box" rows="12" id="form-message" placeholder="Ihre Nachricht"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg">Send Message</button>
+          </form>
         </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-6">
-            <form>
-              <div class="form-group">
-                <input type="email" class="form-control" id="form-name" placeholder="Name">
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" id="form-email" placeholder="Email Address">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="form-subject" placeholder="Subject">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control contact__message-box" rows="12" id="form-message" placeholder="Message"></textarea>
-              </div>
-              <button type="submit" class="btn btn-success btn-lg">Send Message</button>
-            </form>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-6">
-            <div id="googlemap"></div>
+        <div class="col-sm-12 col-md-6">
+          <div class="contact__embed-container">
+              <div id="map" class="contact__google-map"></div>
           </div>
         </div>
       </div>
@@ -224,76 +212,68 @@
   </section>
   <!-- Ende Kontakt -->
 
-  <footer id="subfooter">
-    <div class="wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-4">
-            <div class="subfooter__content-header">
-              <h2 class="subfooter__title"><span class="fa fa-map-marker"></span> Anschrift</h2>
-            </div>
-            <div class="subfooter__content-text subfooter__content-text--center">
-              <p class="subfooter__text">48369, Saerbeck</p>
-              <p class="subfooter__text">+49 888 455 6677</p>
-              <p class="subfooter__text">mail@example.com</p>
-            </div>
+  <footer id="subfooter" class="page-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-4 subfooter__column">
+          <div class="subfooter__content-header">
+            <h2 class="subfooter__title"><span class="fa fa-map-marker"></span> Anschrift</h2>
           </div>
-          <div class="col-sm-12 col-md-4">
-            <div class="subfooter__content-header">
-              <h2 class="subfooter__title"><span class="fa fa-clock-o"></span> Oeffnungszeiten</h2>
-            </div>
-            <div class="subfooter__content-text">
-              <table class="subfooter__opentime-table">
-                <tbody>
-                  <tr class="subfooter__opentime-row">
-                    <td>Montag:</td>
-                    <td>geschlossen</td>
-                  </tr>
-                  <tr class="subfooter__opentime-row">
-                    <td>Dienstag:</td>
-                    <td>14:00 - 18:00 Uhr</td>
-                  </tr>
-                  <tr class="subfooter__opentime-row">
-                    <td>Mittwoch:</td>
-                    <td>14:00 - 18:00 Uhr</td>
-                  </tr>
-                  <tr class="subfooter__opentime-row">
-                    <td>Donnerstag:</td>
-                    <td>14:00 - 18:00 Uhr</td>
-                  </tr>
-                  <tr class="subfooter__opentime-row">
-                    <td>Freitag:</td>
-                    <td>geschlossen</td>
-                  </tr>
-                  <tr class="subfooter__opentime-row">
-                    <td>Samstag:</td>
-                    <td>14:00 - 18:00 Uhr</td>
-                  </tr>
-                  <tr class="subfooter__opentime-row">
-                    <td>Sonntag:</td>
-                    <td>14:00 - 18:00 Uhr</td>
-                  </tr>
-                </tbody>
-              </table>
-              <!-- <ul class="subfooter__text">
-                <li>Montags : geschlossen</li>
-                <li>Dienstag - Donnerstag : 14:00 - 18:00 Uhr</li>
-                <li>Freitags : geschlossen</li>
-                <li>Samstag - Sonntag : 14:00 - 18:00 Uhr</li>
-              </ul> -->
-            </div>
+          <div class="subfooter__content-text subfooter__content-text--center">
+            <p class="subfooter__text">48369, Saerbeck</p>
+            <p class="subfooter__text">+49 888 455 6677</p>
+            <p class="subfooter__text">mail@example.com</p>
           </div>
-          <div class="col-sm-12 col-md-4">
-            <div class="subfooter__content-header">
-              <h2 class="subfooter__title"><span class="fa fa-envelope-o"></span> Social Links</h2>
-            </div>
-            <div class="subfooter__content-text subfooter__content-text--center">
-              <p class="subfooter__text">
-                <a class="fa fa-twitter footer-socialicon" target="_blank" href="https://twitter.com/">zwitter</a>
-                <a class="fa fa-facebook footer-socialicon" target="_blank" href="https://www.facebook.com/">frazenbuch</a>
-                <a class="fa fa-google-plus footer-socialicon" target="_blank" href="https://plus.google.com/">g+</a>
-              </p>
-            </div>
+        </div>
+        <div class="col-sm-12 col-md-4 subfooter__column">
+          <div class="subfooter__content-header">
+            <h2 class="subfooter__title"><span class="fa fa-clock-o"></span> Oeffnungszeiten</h2>
+          </div>
+          <div class="subfooter__content-text">
+            <table class="subfooter__opentime-table">
+              <tbody>
+                <tr class="subfooter__opentime-row">
+                  <td>Montag:</td>
+                  <td>geschlossen</td>
+                </tr>
+                <tr class="subfooter__opentime-row">
+                  <td>Dienstag:</td>
+                  <td>14:00 - 18:00 Uhr</td>
+                </tr>
+                <tr class="subfooter__opentime-row">
+                  <td>Mittwoch:</td>
+                  <td>14:00 - 18:00 Uhr</td>
+                </tr>
+                <tr class="subfooter__opentime-row">
+                  <td>Donnerstag:</td>
+                  <td>14:00 - 18:00 Uhr</td>
+                </tr>
+                <tr class="subfooter__opentime-row">
+                  <td>Freitag:</td>
+                  <td>geschlossen</td>
+                </tr>
+                <tr class="subfooter__opentime-row">
+                  <td>Samstag:</td>
+                  <td>14:00 - 18:00 Uhr</td>
+                </tr>
+                <tr class="subfooter__opentime-row">
+                  <td>Sonntag:</td>
+                  <td>14:00 - 18:00 Uhr</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 subfooter__column">
+          <div class="subfooter__content-header">
+            <h2 class="subfooter__title"><span class="fa fa-envelope-o"></span> Social Links</h2>
+          </div>
+          <div class="subfooter__content-text subfooter__content-text--center">
+            <p class="subfooter__text">
+              <a class="fa fa-twitter footer-socialicon" target="_blank" href="https://twitter.com/">zwitter</a>
+              <a class="fa fa-facebook footer-socialicon" target="_blank" href="https://www.facebook.com/">frazenbuch</a>
+              <a class="fa fa-google-plus footer-socialicon" target="_blank" href="https://plus.google.com/">g+</a>
+            </p>
           </div>
         </div>
       </div>
@@ -322,21 +302,26 @@
   <script src="./assets/js/jquery-3.2.1.min.js"></script>
   <!-- <script src="./assets/js/bootstrap.min.js"></script> -->
 
-  <!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
-
-  <!-- <script type="text/javascript">
-      jQuery(function($) {
-          
-          // Google Maps setup
-          var googlemap = new google.maps.Map(
-              document.getElementById('googlemap'),
-              {
-                  center: new google.maps.LatLng(44.5403, -78.5463),
-                  zoom: 8,
-                  mapTypeId: google.maps.MapTypeId.ROADMAP
-              }
-          );
+  <script type="text/javascript">
+    function initMap() {
+      
+      var lat_lng = {lat: 52.168822, lng: 7.631604 };
+      var container = document.getElementById('map');
+      var map = new google.maps.Map(container, {
+        zoom: 16,
+        center: lat_lng,
+        mapTypeControl: false,
+        streetViewControl: false,
       });
-  </script> -->
+      var bikeLayer = new google.maps.BicyclingLayer();
+      bikeLayer.setMap(map);
+      var directionsDisplay = new google.maps.DirectionsRenderer();
+      directionsDisplay.setMap(map);
+    }
+  </script>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmKX4j0ayBS3l_V8BzQUmw2AdQlW3Qov8&callback=initMap">
+</script>
 </body>
 </html>
