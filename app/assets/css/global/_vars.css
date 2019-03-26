@@ -1,5 +1,5 @@
 $white: #ffffff;
-$black: #000;
+$black: #000000;
 
 $cremeWhite: #F3EDD5;
 
@@ -8,6 +8,8 @@ $lightBrown: #D9BE93;
 $mediumBrown: #A76A3B;
 $redBrown: #8D3D22;
 
-$darkGreen: #277e33;
-$mediumGreen: #68b86b;
+$darkGreenOld: #277e33;
+$darkGreen: #03a87c;
+$mediumGreenOld: #68b86b;
+$mediumGreen: #02B875;
 $lightGreen: #40C142;

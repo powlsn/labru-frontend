@@ -1,7 +1,7 @@
 const gulp = require("gulp"),
   del = require('del'),
   autoprefixer = require('gulp-autoprefixer'),
-  browserSync = require("browser-sync"),
+  browsersync = require("browser-sync").create(),
   postcss = require('gulp-postcss'),
   cssvars = require('postcss-simple-vars'),
   nested = require('postcss-nested'),
@@ -15,10 +15,11 @@ const gulp = require("gulp"),
   imagemin = require('gulp-imagemin'),
   changed = require('gulp-changed'),
   uglify = require('gulp-uglify'),
-  lineec = require('gulp-line-ending-corrector');
+  lineec = require('gulp-line-ending-corrector'),
+  webpack = require('webpack'),
+  webpackconfig = require("./webpack.config.js"),
+  webpackstream = require("webpack-stream");
 
-
-const server = browserSync.create();
 
 const paths = {
   html: {
@@ -38,59 +39,77 @@ const paths = {
   sassWatch: {
     src: 'app/assets/sass/**/*.scss'
   },
+  scriptsWatch: {
+    src: 'app/assets/js/**/*.js'
+  },
   js: {
-    src: '',
-    dest: ''
+    src: 'app/assets/js/**/*.js',
+    dest: 'app/temp/js/'
   }
 }
 
-const clean = () => del(['app/temp']);
+// Clean temp 
+function clean() {
+  return del(['./app/temp']);
+}
 
-// ### --- SASS TASK --- ###
+// SASS TASK 
 function sassCompile() {
   return gulp.src(paths.sass.src)
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(paths.sass.dest));
 }
-// ### --- SASS TASK END --- ###
 
-
-// ### --- CSS TASK --- ###
+// CSS TASK 
 function styles() {
-  return gulp.src(paths.css.src)
+  return gulp
+    .src(paths.css.src)
     .pipe(postcss([cssImport, mixins, cssvars, nested, hexrgba, autoprefixer]))
     .on('error', function (error) {
       console.log(error.toString());
       this.emit('end');
     })
-    .pipe(gulp.dest(paths.css.dest));
+    .pipe(gulp.dest(paths.css.dest))
+    .pipe(browsersync.stream());
 }
-// ### --- CSS TASK END --- ###
 
+// SCRIPTS TASK 
+function scripts() {
+  return (
+    gulp
+      .src(paths.js.src)
+      .pipe(webpackstream(webpackconfig, webpack))
+      .pipe(gulp.dest(paths.js.dest))
+      .pipe(browsersync.stream())
+  );
+}
 
-// ### --- BROWSER SYNC --- ###
-function reload(done) {
-  server.reload();
+// BrowserSync Reload 
+function browserSyncReload(done) {
+  browsersync.reload();
   done();
 }
 
-function serve(done) {
-  server.init({
+// BrowserSync 
+function browserSync(done) {
+  browsersync.init({
     server: {
       baseDir: './app'
-    }
+    },
+    port: 3000
   });
   done();
 }
-// ### --- BROWSER SYNC END --- ###
 
 
-// ### --- WATCH TASK --- ###
+// WATCH TASK 
 function watchFiles() {
   gulp.watch(paths.sassWatch.src, sassCompile);
-  gulp.watch(paths.cssWatch.src, gulp.series(styles, reload));
-  gulp.watch(paths.html.src, reload);
+  gulp.watch(paths.cssWatch.src, styles);
+  gulp.watch(paths.scriptsWatch.src, scripts);
+  gulp.watch(paths.html.src, browserSyncReload);
 }
-// ### --- WATCH TASK END --- ###
 
-exports.watch = gulp.series(clean, sassCompile, styles, serve, watchFiles);
+const watch = gulp.parallel(watchFiles, browserSync);
+
+exports.watch = watch;

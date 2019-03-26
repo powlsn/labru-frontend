@@ -466,7 +466,7 @@ img {
     }
 
 .primary-nav a {
-        color: #68b86b;
+        color: #02B875;
         font-weight: 500;
         font-size: 1.15rem;
         text-decoration: none;
@@ -476,7 +476,7 @@ img {
 
 .large-hero {
     position: relative;
-    border-bottom: 10px solid #277e33;
+    border-bottom: 10px solid #03a87c;
 }
 
 .large-hero__image {
@@ -587,7 +587,7 @@ img {
     }
 
 .button {
-    background-color: #68b86b;
+    background-color: #02B875;
     color: #fff;
     text-decoration: none;
     padding: .75rem 1.2rem;
@@ -958,7 +958,7 @@ img {
     }
 
 .subfooter__opentime-row--active {
-            background: #277e33;
+            background: #03a87c;
             color: #fff;
         }
 
