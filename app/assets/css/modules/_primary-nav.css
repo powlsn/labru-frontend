@@ -42,7 +42,7 @@
         }
     }
 
-    a {
+    a:link, a:visited {
         color: $mediumGreen;
         font-weight: 500;
         font-size: 1rem;
@@ -58,5 +58,9 @@
             background-color: transparent;
             box-shadow: none;
         }
+    }
+        
+    a:hover, a:active {
+        color: $mediumBrown;
     }
 }

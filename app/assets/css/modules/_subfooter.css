@@ -7,9 +7,29 @@
             padding-top: 0;
         }
 
-        @mixin atSmall {
+        @mixin atMedium {
             padding-top: 0;
         }
+    }
+
+    &__content-header {
+        margin-bottom: .5rem;
+    }
+
+    &__content-text {
+        &--center {
+            text-align: center;
+        }
+
+        & a:link, a:visited {
+            padding: 0 8px;
+            color: $darkGreen;
+        }
+        
+        & a:hover, a:active {
+            color: $mediumBrown;
+        }
+        
     }
 
     &__title {
@@ -25,18 +45,11 @@
         font-size: 1.125rem;
         list-style-type: none;
         margin: 0;
-        padding: 0;
+        padding: 4px 8px;
     }
 
-    &__content-header {
-        margin-bottom: .5rem;
-    }
-
-    &__content-text {
-        &--center {
-            text-align: center;
-        }
-        
+    &__text:first-child {
+        padding-top: 0;
     }
 
     &__opentime-table {
@@ -45,7 +58,10 @@
         font-size: 1.125rem;
         font-weight: 500;
         table-layout:auto;
-        width: 80%;
+
+        & td {
+            padding: 4px 8px;
+        }
 
     }
 

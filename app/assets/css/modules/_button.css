@@ -1,5 +1,5 @@
 .button {
-    background-color: $mediumGreen;
+    background-color: $darkGreen;
     color: #fff;
     text-decoration: none;
     padding: .75rem 1.2rem;
@@ -7,12 +7,15 @@
     border-radius: 0.625rem;
 
     &--large {
-        font-size: .75rem;
-        padding: .35rem 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.3rem;
+        border: 1px solid transparent;
 
         @mixin atSmall {
             font-size: 1.2rem;
-            padding: 1.1rem 1.9rem;
+            padding: 0.5rem 1rem;
         }
     }
 
@@ -20,4 +23,11 @@
         background-color: $mediumBrown;
         color: #fff;
     }
+
+    &:hover {
+        background-color: $darkBrown;
+        text-decoration: none;
+        color: $white;
+    }
+
 }

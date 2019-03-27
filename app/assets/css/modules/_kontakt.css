@@ -59,10 +59,6 @@
     &__embed-container {
         margin-top: 1.75rem;
 
-        @mixin atSmall {
-            margin-top:  0;
-        }
-
         @mixin atMedium {
             margin-top:  0;
         }

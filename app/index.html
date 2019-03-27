@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 
   <link rel="stylesheet" href="./temp/css/vendor.css">
+  <link rel="stylesheet" href="./temp/css/all.css">
   <link rel="stylesheet" href="./temp/css/styles.css">
 </head>
 <body>
@@ -105,7 +106,7 @@
         <h1 class="events__title">Feiern Sie bei Uns!</h1>
       </div>
       <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm">
           <div class="events__text-content">
             <p class="events__text">
               Sie haben etwas zu feiern und suchen den richtigen Rahmen?
@@ -185,7 +186,7 @@
         <h2 class="contact__title">Schreiben Sie uns</h2>
       </div>
       <div class="row">
-        <div class="col-sm-12 col-md-6">
+        <div class="col-12 col-lg-6">
           <form>
             <div class="form-group">
               <input type="email" class="form-control" id="form-name" placeholder="Name">
@@ -199,10 +200,10 @@
             <div class="form-group">
               <textarea class="form-control contact__message-box" rows="12" id="form-message" placeholder="Ihre Nachricht"></textarea>
             </div>
-            <button type="submit" class="btn btn-success btn-lg">Send Message</button>
+            <button type="submit" class="button button--large">Send Message</button>
           </form>
         </div>
-        <div class="col-sm-12 col-md-6">
+        <div class="col-12 col-lg-6">
           <div class="contact__embed-container">
               <div id="map" class="contact__google-map"></div>
           </div>
@@ -215,19 +216,20 @@
   <footer id="subfooter" class="page-section">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-4 subfooter__column">
+        <div class="col-12 col-lg-4 subfooter__column">
           <div class="subfooter__content-header">
-            <h2 class="subfooter__title"><span class="fa fa-map-marker"></span> Anschrift</h2>
+            <h2 class="subfooter__title"><i class="fas fa-map-pin"></i> Anschrift</h2>
           </div>
           <div class="subfooter__content-text subfooter__content-text--center">
+            <p class="subfooter__text">Eichengrund 8</p>
             <p class="subfooter__text">48369, Saerbeck</p>
             <p class="subfooter__text">+49 888 455 6677</p>
             <p class="subfooter__text">mail@example.com</p>
           </div>
         </div>
-        <div class="col-sm-12 col-md-4 subfooter__column">
+        <div class="col-12 col-lg-4 subfooter__column">
           <div class="subfooter__content-header">
-            <h2 class="subfooter__title"><span class="fa fa-clock-o"></span> Oeffnungszeiten</h2>
+            <h2 class="subfooter__title"><i class="far fa-clock"></i> Oeffnungszeiten</h2>
           </div>
           <div class="subfooter__content-text">
             <table class="subfooter__opentime-table">
@@ -264,16 +266,20 @@
             </table>
           </div>
         </div>
-        <div class="col-sm-12 col-md-4 subfooter__column">
+        <div class="col-12 col-lg-4 subfooter__column">
           <div class="subfooter__content-header">
-            <h2 class="subfooter__title"><span class="fa fa-envelope-o"></span> Social Links</h2>
+            <h2 class="subfooter__title"><i class="fas fa-user-friends"></i> Social Links</h2>
           </div>
           <div class="subfooter__content-text subfooter__content-text--center">
-            <p class="subfooter__text">
-              <a class="fa fa-twitter footer-socialicon" target="_blank" href="https://twitter.com/">zwitter</a>
-              <a class="fa fa-facebook footer-socialicon" target="_blank" href="https://www.facebook.com/">frazenbuch</a>
-              <a class="fa fa-google-plus footer-socialicon" target="_blank" href="https://plus.google.com/">g+</a>
-            </p>
+            <a target="_blank" href="https://www.instagram.com/landhausbruckmann/?hl=de">
+              <i class="fab fa-instagram fa-3x"></i>
+            </a>
+            <a target="_blank" href="https://www.facebook.com/landhaus.bruckmann/">
+              <i class="fab fa-facebook fa-3x"></i>
+            </a>
+            <a target="_blank" href="https://goo.gl/maps/wFtJs7Xn1y22">
+              <i class="fas fa-globe-europe fa-3x"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -284,13 +290,14 @@
   <footer id="footer">
     <div class="container-fluid footer__bg-black">
       <div class="row">
-        <div class="col-md-12 footer__text-center">
-          <p class="footer__text-white">created by &copy; Elmar Bruckmann <span id="year-created">2000</span> &minus;
-            <a href="#" class="footer__text-white">Impressum</a> &vert;
-            <a href="#" class="footer__text-white">Datenschutz</a> &vert;
-            <a href="#" class="footer__text-white">Disclaimer</a> &vert;
-            <a href="#" class="footer__text-white">Login</a>
-          </p>
+        <div class="col-md-12 footer__text-center footer__content-text">
+          <a href="#">Impressum</a>
+          <span> &vert; </span>
+          <a href="#">Datenschutz</a>
+          <span> &vert; </span>
+          <a href="#">Disclaimer</a>
+          <span> &vert; </span>
+          <a href="#">Login</a>
         </div>
       </div>
       <!-- row -->

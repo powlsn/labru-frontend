@@ -33,6 +33,11 @@ const paths = {
     src: 'app/assets/sass/vendor.scss',
     dest: 'app/assets/css/'
   },
+  faSass: {
+    src: 'node_modules/@fortawesome/fontawesome.scss',
+    dest: 'app/assets/css/'
+  },
+
   cssWatch: {
     src: 'app/assets/css/**/*.css'
   },
@@ -55,9 +60,18 @@ function clean() {
 
 // SASS TASK 
 function sassCompile() {
-  return gulp.src(paths.sass.src)
+  return gulp
+    .src(paths.sass.src)
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(paths.sass.dest));
+}
+
+// compile font awesome
+function faSass() {
+  return gulp
+    .src(paths.faSass.src)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(paths.faSass.dest))
 }
 
 // CSS TASK 
