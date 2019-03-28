@@ -1,5 +1,5 @@
 .events {
-    background: $darkBrown;
+    background: $darkbrown;
     height: 100%;
     background-size: cover;
     display: block;
@@ -14,37 +14,12 @@
         background-size: cover;
     }
 
-    &__section-header {
-        margin-bottom: 1.5rem;
-    }
-
     &__text-content {
-        color: #fff;
-    }
-
-    &__title {
-        font-family: 'Courgette', cursive;
-        margin: 0;
-        text-align: center;
-        color: #fff;
-        font-weight: 300;
-        font-size: 2rem;
-
-        @mixin atSmall {
-            font-size: 2.25rem;
-        }
-
-        @mixin atMedium {
-            font-size: 2.5rem;
-        }
-
-        @mixin atLarge {
-            font-size: 2.75rem;
-        }
+        color: $white;
     }
 
     &__text {
-        color: #fff;
+        color: $white;
         line-height: 1.35;
         font-weight: 300;
 

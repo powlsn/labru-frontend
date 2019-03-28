@@ -1,34 +1,10 @@
 .galerie {
 
-    &__section-header {
-        margin-bottom: 1.5rem;
-    }
-    
-    &__title {
-        font-family: 'Courgette', cursive;
-        margin: 0;
-        text-align: center;
-        font-weight: 300;
-        font-size: 2rem;
-
-        @mixin atSmall {
-            font-size: 2.25rem;
-        }
-
-        @mixin atMedium {
-            font-size: 2.5rem;
-        }
-
-        @mixin atLarge {
-            font-size: 2.75rem;
-        }
-    }
 }
 
 /* Bootstrap correction */
 .card-columns {
     column-gap: 0;
-
 }
 
 .card-columns .card {

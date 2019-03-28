@@ -1,6 +1,6 @@
 .large-hero {
     position: relative;
-    border-bottom: 10px solid $darkGreen;
+    border-bottom: 10px solid $darkgreen;
 
     &__image {
         display: block;
@@ -23,7 +23,7 @@
     &__title {
         font-family: 'Courgette', cursive;
         font-weight: 300;
-        color: #fff;
+        color: $white;
         text-shadow: 1px 2px 0 rgba(39, 126, 51, 0.7);
         margin: 0;
 
@@ -38,7 +38,7 @@
 
     &__subtitle {
         font-family: 'Courgette', cursive;
-        color: #fff;
+        color: $white;
         font-weight: 300;
         font-size: 1.375rem;
         line-height: 1.15;
@@ -67,7 +67,7 @@
 
     &__text {
         font-family: 'Courgette', cursive;
-        color: #fff;
+        color: $white;
         font-size: 1.375rem;
         font-weight: 300;
         text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);

@@ -1,6 +1,7 @@
 .button {
-    background-color: $darkGreen;
-    color: #fff;
+    background-color: $white;
+    color: $darkgreen;
+    border: 1px solid $darkgreen;
     text-decoration: none;
     padding: .75rem 1.2rem;
     display: inline-block;
@@ -11,7 +12,7 @@
         font-size: 1rem;
         line-height: 1.5;
         border-radius: 0.3rem;
-        border: 1px solid transparent;
+        border: 1px solid $darkgreen;
 
         @mixin atSmall {
             font-size: 1.2rem;
@@ -19,15 +20,11 @@
         }
     }
 
-    &--brown {
-        background-color: $mediumBrown;
-        color: #fff;
-    }
-
     &:hover {
-        background-color: $darkBrown;
+        background-color: $darkgreen;
         text-decoration: none;
         color: $white;
+        border: 1px solid $white;
     }
 
 }

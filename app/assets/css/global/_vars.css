@@ -1,17 +1,10 @@
 $white: #ffffff;
-$black: #000000;
+$lightgrey: #c6c6c6;
 $grey: #6d6d6d;
-$lightGrey: #c6c6c6;
+$darkgrey: #373a3c;
+$black: #000000;
 
-$cremeWhite: #F3EDD5;
+$darkbrown: #422114;
 
-$darkBrown: #422114;
-$lightBrown: #D9BE93;
-$mediumBrown: #A76A3B;
-$redBrown: #8D3D22;
-
-$darkGreenOld: #277e33;
-$darkGreen: #03a87c;
-$mediumGreenOld: #68b86b;
-$mediumGreen: #02B875;
-$lightGreen: #40C142;
+$darkgreen: #03a87c;
+$mediumgreen: #02B875; /* currently not in use */

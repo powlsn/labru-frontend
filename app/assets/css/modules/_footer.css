@@ -17,21 +17,8 @@
         }
 
         & a:hover {
-            color: $darkGreen;
+            color: $darkgreen;
             text-decoration: none;
         }
-        
-        /* & a:visited {
-            color: $mediumBrown;
-        } */
-        
-        /* & a:active {
-            color: $mediumBrown;
-        }
-
-        & a:focus {
-            color: $mediumGreen;
-        } */
     }
-
 }

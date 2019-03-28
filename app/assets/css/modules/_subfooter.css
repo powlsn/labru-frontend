@@ -23,21 +23,17 @@
 
         & a:link, a:visited {
             padding: 0 8px;
-            color: $darkGreen;
+            color: $darkgreen;
         }
         
         & a:hover, a:active {
-            color: $mediumBrown;
+            color: $darkgrey;
         }
         
     }
 
     &__title {
-        font-family: 'Courgette', cursive;
-        font-weight: 300;
         font-size: 1.8rem;
-        margin: 0;
-        text-align: center;
     }
 
     &__text {
@@ -68,7 +64,7 @@
     &__opentime-row {
         
         &--active {
-            background: $darkGreen;
+            background: $darkgreen;
             color: #fff;
         }
     }

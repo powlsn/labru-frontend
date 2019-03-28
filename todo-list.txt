@@ -1,14 +1,18 @@
 FRONTEND:
-1. setup gulp tasks for dev.
+done - setup gulp tasks for dev.
     - https://gulpjs.com/docs/en/getting-started/using-plugins
-    - browser sync on any file save.
-    - combine and modernize css on save/tasks (watch css .pipe with plugins)
-    - combine and modernize js on save/tasks (watch js .pipe with plugins)
 
-2. get bootstrap4 to work.
-3. get fontawesome to work. also within the package manager
-4. get icons/sprites/svg task to work
-5. get a todolist for backend developement. like images (big, medium, small)
+done - get bootstrap4 to work.
+½ done - get fontawesome to work. also within the package manager
+    - https://fontawesome.com/icons?d=gallery&m=free
+TODO: Aktuelles image responsive
+TODO: get icons/sprites/svg task to work
+TODO: Hover on gallery (images) to show total images count and name
+TODO: MobileMenu Hamburger icon animation
+TODO: SmoothScroll
+TODO: lazyloading
+TODO: bundle, minify/uglify css, js for build process
+TODO: sticky header
 
 
 BACKEND:
