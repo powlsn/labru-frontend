@@ -25,19 +25,19 @@
         <nav class="primary-nav primary-nav--pull-right">
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <a id="home-link" href="#home">Home</a>
             </li>
             <li>
-              <a href="#news">Aktuelles</a>
+              <a id="news-link" href="#news">Aktuelles</a>
             </li>
             <li>
-              <a href="#events">Feierlichkeiten</a>
+              <a id="events-link" href="#events">Feierlichkeiten</a>
             </li>
             <li>
-              <a href="#gallery">Galerie</a>
+              <a id="gallery-link" href="#gallery">Galerie</a>
             </li>
             <li>
-              <a href="#contact">Kontakt</a>
+              <a id="contact-link" href="#contact">Kontakt</a>
             </li>
           </ul>
         </nav>
@@ -71,7 +71,7 @@
   <!-- Ende Hero -->
 
   <!-- ============= Aktuelles ============= -->
-  <section id="news" class="page-section">
+  <section id="news" class="page-section" data-nav-link="#news-link">
     <div class="section-header">
       <h1 class="section-header__title section-header__title--fs2">Aktuelles</h1>
     </div>
@@ -102,7 +102,7 @@
   <!-- Ende Aktuelles -->
 
   <!-- ============= Events ============= -->
-  <section id="events" class="events page-section">
+  <section id="events" class="events page-section" data-nav-link="#events-link">
     <div class="container">
       <div class="section-header">
         <h1 class="
@@ -143,7 +143,7 @@
   <!-- Ende Events -->
 
   <!-- ============= Galerie ============= -->
-  <section id="gallery" class="page-section">
+  <section id="gallery" class="page-section" data-nav-link="#gallery-link">
     <div class="container">
       <div class="section-header">
         <h1 class="
@@ -187,7 +187,7 @@
   <!-- Ende Galerie -->
 
   <!-- ============= Kontakt ============= -->
-  <section id="contact" class="contact page-section">
+  <section id="contact" class="contact page-section" data-nav-link="#contact-link">
     <div class="container contact__text-content">
       <div class="section-header">
         <h2 class="section-header__title section-header__title--fs2 section-header__title--white">Schreiben Sie uns</h2>
@@ -220,7 +220,7 @@
   </section>
   <!-- Ende Kontakt -->
 
-  <footer id="subfooter" class="page-section">
+  <footer class="subfooter">
     <div class="container">
       <div class="row">
         <div class="col-12 col-lg-4 subfooter__column">
@@ -294,7 +294,7 @@
   </footer>
 
   <!-- Start Footer -->
-  <footer id="footer">
+  <footer class="footer">
     <div class="container-fluid footer__bg-black">
       <div class="row">
         <div class="col-md-12 footer__text-center footer__content-text">

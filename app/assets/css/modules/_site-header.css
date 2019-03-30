@@ -10,7 +10,14 @@
     }
     
     @mixin atMedium {
-        background-color: rgba($white, .9);
+        position: fixed;
+        background-color: rgba($white, .5);
+
+
+        &--dark {
+            background-color: $white;
+            border-bottom: 2px solid $darkgreen;
+        }
     }
 
 
@@ -37,6 +44,13 @@
             left: auto;
             transform: translateX(0);
             box-shadow: 0px 4px 5px 5px rgba(89,89,89, .2);
+            transition: all .3s ease-out;
+
+            .site-header--dark & {
+                transform: scale(.5);
+                box-shadow: none;
+                background-color: transparent;
+            }
         }
     }
 
@@ -108,12 +122,16 @@
 
     &__menu-content {
         opacity: 0;
-        padding-top: 120px;
+        padding-top: 105px;
         text-align: left;
         position: relative;
         z-index: -10;
         transform: translateY(-50vh);
         transition: all .3s ease-out;
+
+        @mixin atSmall {
+            padding-top: 115px;
+        }
 
         @mixin atMedium {
             padding-top: 0;

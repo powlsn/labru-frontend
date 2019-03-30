@@ -8,11 +8,11 @@ done - get bootstrap4 to work.
 TODO: Aktuelles image responsive
 TODO: get icons/sprites/svg task to work
 TODO: Hover on gallery (images) to show total images count and name
-TODO: MobileMenu Hamburger icon animation
+done: MobileMenu Hamburger icon animation
 TODO: SmoothScroll
 TODO: lazyloading
 TODO: bundle, minify/uglify css, js for build process
-TODO: sticky header
+done: sticky header
 
 
 BACKEND:

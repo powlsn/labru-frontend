@@ -18,7 +18,6 @@ class RevealOnScroll {
       new Waypoint({
         element: _this,
         handler: function (direction) {
-          console.log(this.element.id + ' hit the 100% mark');
           $(_this).addClass("reveal-item--is-visible");
         },
         offset: _offset
