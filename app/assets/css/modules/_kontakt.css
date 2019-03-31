@@ -5,13 +5,17 @@
     display: block;
 
     @mixin atMedium {
-        background: url('../../assets/images/kontakt-medium.jpg') 50% 0 fixed no-repeat;
-        background-size: cover;
+        &.lazyloaded {
+            background: url('../../assets/images/kontakt-medium.jpg') 50% 0 fixed no-repeat;
+            background-size: cover;
+        }
     }
 
     @mixin atLarge {
-        background: url("../../assets/images/kontakt-large.jpg") 50% 0 fixed no-repeat;
-        background-size: cover;
+        &.lazyloaded {
+            background: url("../../assets/images/kontakt-large.jpg") 50% 0 fixed no-repeat;
+            background-size: cover;
+        }
     }
 
     &__text-content {

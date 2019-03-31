@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="./temp/css/vendor.css">
   <link rel="stylesheet" href="./temp/css/all.css">
   <link rel="stylesheet" href="./temp/css/styles.css">
+  <!-- LazyLoading JS -->
+  <script src="./temp/js/Vendor.js"></script>
 </head>
 <body>
   <!-- ============= Navbar ============= -->
@@ -102,7 +104,7 @@
   <!-- Ende Aktuelles -->
 
   <!-- ============= Events ============= -->
-  <section id="events" class="events page-section" data-nav-link="#events-link">
+  <section id="events" class="events page-section lazyload" data-nav-link="#events-link">
     <div class="container">
       <div class="section-header">
         <h1 class="
@@ -153,32 +155,32 @@
       <div class="card-columns">
         <div class="card card-columns__card">
           <a href="./assets/images/gallery/gallery1.jpg">
-            <img src="./assets/images/gallery/gallery1.jpg" />
+            <img class="lazyload" data-src="./assets/images/gallery/gallery1.jpg" />
           </a>
         </div>
         <div class="card card-columns__card">
           <a href="./assets/images/gallery/gallery2.jpg">
-            <img src="./assets/images/gallery/gallery2.jpg" />
+            <img class="lazyload" data-src="./assets/images/gallery/gallery2.jpg" />
           </a>
         </div>
         <div class="card card-columns__card">
           <a href="./assets/images/gallery/gallery3.jpg">
-            <img src="./assets/images/gallery/gallery3.jpg" />
+            <img class="lazyload" data-src="./assets/images/gallery/gallery3.jpg" />
           </a>
         </div>
         <div class="card card-columns__card">
           <a href="./assets/images/gallery/gallery4.jpg">
-            <img src="./assets/images/gallery/gallery4.jpg" />
+            <img class="lazyload" data-src="./assets/images/gallery/gallery4.jpg" />
           </a>
         </div>
         <div class="card card-columns__card">
           <a href="./assets/images/gallery/gallery5.jpg">
-            <img src="./assets/images/gallery/gallery5.jpg" />
+            <img class="lazyload" data-src="./assets/images/gallery/gallery5.jpg" />
           </a>
         </div>
         <div class="card card-columns__card">
           <a href="./assets/images/gallery/gallery6.jpg">
-            <img src="./assets/images/gallery/gallery6.jpg" />
+            <img class="lazyload" data-src="./assets/images/gallery/gallery6.jpg" />
           </a>
         </div>
       </div>
@@ -187,7 +189,7 @@
   <!-- Ende Galerie -->
 
   <!-- ============= Kontakt ============= -->
-  <section id="contact" class="contact page-section" data-nav-link="#contact-link">
+  <section id="contact" class="contact page-section lazyload" data-nav-link="#contact-link">
     <div class="container contact__text-content">
       <div class="section-header">
         <h2 class="section-header__title section-header__title--fs2 section-header__title--white">Schreiben Sie uns</h2>
@@ -337,6 +339,6 @@
 <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmKX4j0ayBS3l_V8BzQUmw2AdQlW3Qov8&callback=initMap">
 </script>
-<script src="./temp/js/main.js"></script>
+<script src="./temp/js/App.js"></script>
 </body>
 </html>

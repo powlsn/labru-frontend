@@ -5,14 +5,14 @@ done - setup gulp tasks for dev.
 done - get bootstrap4 to work.
 ½ done - get fontawesome to work. also within the package manager
     - https://fontawesome.com/icons?d=gallery&m=free
-TODO: Aktuelles image responsive
-TODO: get icons/sprites/svg task to work
-TODO: Hover on gallery (images) to show total images count and name
 done: MobileMenu Hamburger icon animation
-TODO: SmoothScroll
-TODO: lazyloading
-TODO: bundle, minify/uglify css, js for build process
+done: SmoothScroll
+done: lazyloading
 done: sticky header
+TODO: get icons/sprites/svg task to work
+TODO: Aktuelles image responsive (croping)
+TODO: Hover on gallery (images) to show total images count and name
+TODO: bundle, minify/uglify css, js for build process
 
 
 BACKEND:

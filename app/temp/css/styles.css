@@ -830,19 +830,17 @@ img {
 }
 
 @media (min-width: 992px) {
-
-.events {
-        background: url('../../assets/images/events-medium.jpg') 50% 0 fixed no-repeat;
-        background-size: cover
-}
+        .events.lazyloaded {
+            background: url('../../assets/images/events-medium.jpg') 50% 0 fixed no-repeat;
+            background-size: cover;
+        }
     }
 
 @media (min-width: 1200px) {
-
-.events {
-        background: url('../../assets/images/events-large.jpg') 50% 0 fixed no-repeat;
-        background-size: cover
-}
+        .events.lazyloaded {
+            background: url('../../assets/images/events-large.jpg') 50% 0 fixed no-repeat;
+            background-size: cover;
+        }
     }
 
 .events__text-content {
@@ -885,19 +883,17 @@ img {
 }
 
 @media (min-width: 992px) {
-
-.contact {
-        background: url('../../assets/images/kontakt-medium.jpg') 50% 0 fixed no-repeat;
-        background-size: cover
-}
+        .contact.lazyloaded {
+            background: url('../../assets/images/kontakt-medium.jpg') 50% 0 fixed no-repeat;
+            background-size: cover;
+        }
     }
 
 @media (min-width: 1200px) {
-
-.contact {
-        background: url("../../assets/images/kontakt-large.jpg") 50% 0 fixed no-repeat;
-        background-size: cover
-}
+        .contact.lazyloaded {
+            background: url("../../assets/images/kontakt-large.jpg") 50% 0 fixed no-repeat;
+            background-size: cover;
+        }
     }
 
 .contact__text-content {
@@ -957,6 +953,11 @@ img {
         margin-bottom: .5rem;
     }
 
+.subfooter__content-text {
+        text-decoration: none;
+        
+    }
+
 .subfooter__content-text--center {
             text-align: center;
         }
@@ -968,6 +969,7 @@ img {
 
 .subfooter__content-text a:hover, .subfooter__content-text a:active {
             color: #373a3c;
+            text-decoration: none;
         }
 
 .subfooter__title {

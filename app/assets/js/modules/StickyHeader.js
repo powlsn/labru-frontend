@@ -4,6 +4,7 @@ import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoi
 
 class StickyHeader {
   constructor() {
+    this.lazyImages = $('.lazyload');
     this.siteHeader = $('.site-header');
     this.navElements = $('.primary-nav a');
     this.triggerElement = $('.large-hero__title');
@@ -12,6 +13,13 @@ class StickyHeader {
     this.addSmoothScrolling();
     this.createHeaderWaypoint();
     this.createPageSectionWaypoints();
+    this.refreshWaypoints();
+  }
+
+  refreshWaypoints() {
+    this.lazyImages.on('load', function () {
+      Waypoint.refreshAll();
+    });
   }
 
   addSmoothScrolling() {
@@ -24,9 +32,9 @@ class StickyHeader {
       element: this.triggerElement[0],
       handler: (direction) => {
         if (direction == "down") {
-          that.siteHeader.addClass('site-header--dark');
+          $(that.siteHeader).addClass('site-header--dark');
         } else {
-          that.siteHeader.removeClass('site-header--dark');
+          $(that.siteHeader).removeClass('site-header--dark');
         }
       }
     });
@@ -40,10 +48,10 @@ class StickyHeader {
         element: currentSection,
         handler: function (direction) {
           if (direction == "down") {
-            let matchingLink = currentSection.getAttribute("data-nav-link");
-            that.headerLinks.removeClass("is-current-link");
-            $(matchingLink).addClass("is-current-link");
+            var matchingLink = currentSection.getAttribute("data-nav-link");
           }
+          that.headerLinks.removeClass("is-current-link");
+          $(matchingLink).addClass("is-current-link");
         },
         offset: "17%"
       });
@@ -51,12 +59,12 @@ class StickyHeader {
         element: currentSection,
         handler: function (direction) {
           if (direction == "up") {
-            let matchingLink = currentSection.getAttribute("data-nav-link");
-            that.headerLinks.removeClass("is-current-link");
-            $(matchingLink).addClass("is-current-link");
+            var matchingLink = currentSection.getAttribute("data-nav-link");
           }
+          that.headerLinks.removeClass("is-current-link");
+          $(matchingLink).addClass("is-current-link");
         },
-        offset: "-30%"
+        offset: "-28%"
       });
     });
   }

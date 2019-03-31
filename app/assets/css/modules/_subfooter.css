@@ -18,6 +18,8 @@
     }
 
     &__content-text {
+        text-decoration: none;
+        
         &--center {
             text-align: center;
         }
@@ -29,6 +31,7 @@
         
         & a:hover, a:active {
             color: $darkgrey;
+            text-decoration: none;
         }
         
     }
