@@ -100,7 +100,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mm = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
-var galleryItemScroll = new _modules_RevealOnScroll__WEBPACK_IMPORTED_MODULE_2__["default"](jquery__WEBPACK_IMPORTED_MODULE_0___default()(".card-columns__card"), "60%");
+var galleryItemScroll = new _modules_RevealOnScroll__WEBPACK_IMPORTED_MODULE_2__["default"](jquery__WEBPACK_IMPORTED_MODULE_0___default()(".card"), "60%");
 var stickyHeader = new _modules_StickyHeader__WEBPACK_IMPORTED_MODULE_3__["default"]();
 
 /***/ }),
