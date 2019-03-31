@@ -18,7 +18,9 @@ const gulp = require("gulp"),
   lineec = require('gulp-line-ending-corrector'),
   webpack = require('webpack'),
   webpackconfig = require("./webpack.config.js"),
-  webpackstream = require("webpack-stream");
+  webpackstream = require("webpack-stream"),
+  svgSprite = require('gulp-svg-sprite'),
+  gulpRename = require('gulp-rename');
 
 
 const paths = {
@@ -33,11 +35,6 @@ const paths = {
     src: 'app/assets/sass/vendor.scss',
     dest: 'app/assets/css/'
   },
-  faSass: {
-    src: 'node_modules/@fortawesome/fontawesome.scss',
-    dest: 'app/assets/css/'
-  },
-
   cssWatch: {
     src: 'app/assets/css/**/*.css'
   },
@@ -58,6 +55,10 @@ function clean() {
   return del(['./app/temp']);
 }
 
+function cleanSpriteDir() {
+  return del(['./app/temp/sprite']);
+}
+
 // SASS TASK 
 function sassCompile() {
   return gulp
@@ -66,12 +67,43 @@ function sassCompile() {
     .pipe(gulp.dest(paths.sass.dest));
 }
 
-// compile font awesome
-function faSass() {
+// SPRITE TASK
+const config = {
+  shape: {
+    spacing: {
+      padding: 1
+    },
+  },
+  mode: {
+    css: {
+      sprite: 'sprite.svg',
+      render: {
+        css: {
+          template: './gulp/template/sprite-template.css'
+        }
+      }
+    }
+  }
+}
+
+function createSprite() {
   return gulp
-    .src(paths.faSass.src)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(paths.faSass.dest))
+    .src('./app/assets/images/svg/**/*.svg')
+    .pipe(svgSprite(config))
+    .pipe(gulp.dest('./app/temp/sprite'));
+}
+
+function copySpriteCss() {
+  return gulp
+    .src('./app/temp/sprite/css/*.css')
+    .pipe(gulpRename('_sprite.css'))
+    .pipe(gulp.dest('./app/assets/css/modules'));
+}
+
+function copySpriteGraphic() {
+  return gulp
+    .src('./app/temp/sprite/css/**/*.svg')
+    .pipe(gulp.dest('./app/assets/images/sprites'));
 }
 
 // CSS TASK 
@@ -125,5 +157,15 @@ function watchFiles() {
 }
 
 const watch = gulp.parallel(watchFiles, browserSync);
+const icons = gulp.series(
+  cleanSpriteDir,
+  createSprite,
+  gulp.parallel(
+    copySpriteCss,
+    copySpriteGraphic
+  )
+);
 
 exports.watch = watch;
+exports.createSprite = createSprite;
+exports.icons = icons;

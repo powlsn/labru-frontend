@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 
   <link rel="stylesheet" href="./temp/css/vendor.css">
-  <link rel="stylesheet" href="./temp/css/all.css">
+  <!-- <link rel="stylesheet" href="./temp/css/all.css"> -->
   <link rel="stylesheet" href="./temp/css/styles.css">
   <!-- LazyLoading JS -->
   <script src="./temp/js/Vendor.js"></script>
@@ -252,7 +252,10 @@
       <div class="row">
         <div class="col-12 col-lg-4 subfooter__column">
           <div class="subfooter__content-header">
-            <h2 class="section-header__title subfooter__title"><i class="fas fa-map-pin"></i> Anschrift</h2>
+            <div class="icon icon--map-pin"></div>
+            <h2 class="section-header__title subfooter__title">
+              Anschrift
+            </h2>
           </div>
           <div class="subfooter__content-text subfooter__content-text--center">
             <p class="subfooter__text">Eichengrund 8</p>
@@ -263,7 +266,7 @@
         </div>
         <div class="col-12 col-lg-4 subfooter__column">
           <div class="subfooter__content-header">
-            <h2 class="section-header__title subfooter__title"><i class="far fa-clock"></i> Oeffnungszeiten</h2>
+            <h2 class="section-header__title subfooter__title"><div class="icon icon--clock"></div> Oeffnungszeiten</h2>
           </div>
           <div class="subfooter__content-text">
             <table class="subfooter__opentime-table">
@@ -302,17 +305,20 @@
         </div>
         <div class="col-12 col-lg-4 subfooter__column">
           <div class="subfooter__content-header">
-            <h2 class="section-header__title subfooter__title"><i class="fas fa-user-friends"></i> Social Links</h2>
+            <span class="icon icon--user-friends"></span>
+            <h2 class="section-header__title subfooter__title">
+              Social Links
+            </h2>
           </div>
-          <div class="subfooter__content-text subfooter__content-text--center">
-            <a target="_blank" href="https://www.instagram.com/landhausbruckmann/?hl=de">
-              <i class="fab fa-instagram fa-3x"></i>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/landhausbruckmann/?hl=de" target="_blank" class="social-icons__icon">
+              <span class="icon icon--instagram"></span>
             </a>
-            <a target="_blank" href="https://www.facebook.com/landhaus.bruckmann/">
-              <i class="fab fa-facebook-square fa-3x"></i>
+            <a href="https://www.facebook.com/landhaus.bruckmann/" target="_blank" class="social-icons__icon">
+              <span class="icon icon--facebook-square"></span>
             </a>
-            <a target="_blank" href="https://goo.gl/maps/wFtJs7Xn1y22">
-              <i class="fas fa-globe-europe fa-3x"></i>
+            <a href="https://goo.gl/maps/wFtJs7Xn1y22" target="_blank" class="social-icons__icon">
+              <span class="icon icon--globe-europe"></span>
             </a>
           </div>
         </div>
@@ -340,10 +346,7 @@
   </footer>
   <!-- Ende Footer -->
 
-  <!-- <script src="./vendor/js/jquery-3.2.1.min.js"></script> -->
-  <!-- <script src="./assets/js/bootstrap.min.js"></script> -->
-
-  <script type="text/javascript">
+  <script>
     function initMap() {
       
       var lat_lng = {lat: 52.168822, lng: 7.631604 };
@@ -354,10 +357,6 @@
         mapTypeControl: false,
         streetViewControl: false,
       });
-      var bikeLayer = new google.maps.BicyclingLayer();
-      bikeLayer.setMap(map);
-      var directionsDisplay = new google.maps.DirectionsRenderer();
-      directionsDisplay.setMap(map);
     }
   </script>
 

@@ -1134,3 +1134,80 @@ img {
         opacity: 1;
         transform: scale(1);
     }
+
+.social-icons {
+  text-align: center;
+}
+
+.social-icons__icon {
+    /* color: $darkgreen; */
+    display: inline-block;
+    margin: 0 5px 5px 5px;
+    width: 33%;
+    height: 32px;
+    position: relative;
+  }
+
+/* border-radius: 12px; */
+
+@media (min-width: 768px) {
+
+.social-icons__icon {
+      width: 72px;
+      margin: 0 5px
+  }
+    }
+
+.social-icons__icon .icon {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+.icon {
+    background-image: url('../../assets/images/sprites/svg/sprite-fab24781.svg');
+}
+
+.icon--clock {
+        width: 34px;
+        height: 34px;
+        background-position: 0 0;
+    }
+
+.icon--facebook-square {
+        width: 30px;
+        height: 34px;
+        background-position: 39.08045977011494% 0;
+    }
+
+.icon--globe-europe {
+        width: 33px;
+        height: 34px;
+        background-position: 76.19047619047619% 0;
+    }
+
+.icon--instagram {
+        width: 30px;
+        height: 34px;
+        background-position: 0 54.83870967741935%;
+    }
+
+.icon--logo {
+        width: 34px;
+        height: 16.69px;
+        background-position: 36.144578313253014% 42.86975160761568%;
+    }
+
+.icon--map-pin {
+        width: 20px;
+        height: 34px;
+        background-position: 100% 0;
+    }
+
+.icon--user-friends {
+        width: 34px;
+        height: 27.6px;
+        background-position: 0 99.41520467836257%;
+    }
