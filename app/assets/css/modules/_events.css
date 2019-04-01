@@ -6,14 +6,14 @@
 
     @mixin atMedium {
         &.lazyloaded {
-            background: url('../../assets/images/events-medium.jpg') 50% 0 fixed no-repeat;
+            background: url('../../assets/images/event-md.jpg') 50% 0 fixed no-repeat;
             background-size: cover;
         }
     }
 
     @mixin atLarge {
         &.lazyloaded {
-            background: url('../../assets/images/events-large.jpg') 50% 0 fixed no-repeat;
+            background: url('../../assets/images/event-lg.jpg') 50% 0 fixed no-repeat;
             background-size: cover;
         }
     }

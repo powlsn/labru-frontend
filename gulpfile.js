@@ -10,10 +10,9 @@ const gulp = require("gulp"),
   sass = require('gulp-sass'),
   hexrgba = require('postcss-hexrgba'),
   cleanCSS = require('gulp-clean-css'),
-  sourcemaps = require('gulp-sourcemaps'),
-  concat = require('gulp-concat'),
+  // concat = require('gulp-concat'),
+  rev = require('gulp-rev'),
   imagemin = require('gulp-imagemin'),
-  changed = require('gulp-changed'),
   uglify = require('gulp-uglify'),
   lineec = require('gulp-line-ending-corrector'),
   webpack = require('webpack'),
@@ -22,7 +21,8 @@ const gulp = require("gulp"),
   svgSprite = require('gulp-svg-sprite'),
   svg2png = require('gulp-svg2png'),
   gulpRename = require('gulp-rename'),
-  modernizr = require('gulp-modernizr');
+  modernizr = require('gulp-modernizr'),
+  usemin = require('gulp-usemin');
 
 
 const paths = {
@@ -179,6 +179,38 @@ function browserSync(done) {
   done();
 }
 
+// BUILD TASKS
+function cleanBeginBuild() {
+  return del(['./dist']);
+}
+
+function optimizeImages() {
+  return gulp
+    .src(['./app/assets/images/**/*', '!./app/assets/images/svg', '!./app/assets/images/svg/**/*'])
+    .pipe(imagemin({
+      progressive: true,
+      interlaced: true,
+      multipass: true
+    }))
+    .pipe(gulp.dest('./dist/assets/images'));
+}
+
+function minify() {
+  return gulp
+    .src('./app/index.html')
+    .pipe(usemin(
+      {
+        css: [() => { return rev() }, () => { return cleanCSS({ compatibility: 'ie8' }) }],
+        js: [
+          () => { return rev() },
+          () => { return lineec({ eolc: 'LF', encoding: 'utf8' }) },
+          () => { return uglify() }
+        ]
+      }
+    ))
+    .pipe(gulp.dest('./dist'));
+}
+
 
 // WATCH TASK 
 function watchFiles() {
@@ -188,6 +220,7 @@ function watchFiles() {
   gulp.watch(paths.html.src, browserSyncReload);
 }
 
+// var tasks
 const watch = gulp.parallel(watchFiles, browserSync);
 const icons = gulp.series(
   cleanSpriteDir,
@@ -200,6 +233,24 @@ const icons = gulp.series(
   cleanSpriteEnd
 );
 
+// Build Tasks load line
+const build = gulp.series(
+  cleanBeginBuild,
+  gulp.parallel(
+    sassCompile,
+    styles,
+    gulp.series(
+      modernize,
+      scripts
+    )
+  ),
+  gulp.parallel(
+    minify,
+    optimizeImages
+  )
+);
+
 exports.watch = watch;
 exports.modernize = modernize;
 exports.icons = icons;
+exports.build = build;
