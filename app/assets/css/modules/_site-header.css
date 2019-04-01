@@ -54,6 +54,10 @@
         }
     }
 
+    &__logo__graphic {
+        text-indent: -9999px;
+    }
+
     &__menu-icon {
         width: 20px;
         height: 19px;

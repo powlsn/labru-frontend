@@ -55,10 +55,6 @@ function clean() {
   return del(['./app/temp']);
 }
 
-function cleanSpriteDir() {
-  return del(['./app/temp/sprite']);
-}
-
 // SASS TASK 
 function sassCompile() {
   return gulp
@@ -86,6 +82,10 @@ const config = {
   }
 }
 
+function cleanSpriteDir() {
+  return del(['./app/temp/sprite', './app/assets/images/sprite']);
+}
+
 function createSprite() {
   return gulp
     .src('./app/assets/images/svg/**/*.svg')
@@ -103,7 +103,11 @@ function copySpriteCss() {
 function copySpriteGraphic() {
   return gulp
     .src('./app/temp/sprite/css/**/*.svg')
-    .pipe(gulp.dest('./app/assets/images/sprites'));
+    .pipe(gulp.dest('./app/assets/images/sprite'));
+}
+
+function cleanSpriteEnd() {
+  return del(['./app/temp/sprite']);
 }
 
 // CSS TASK 
@@ -163,7 +167,8 @@ const icons = gulp.series(
   gulp.parallel(
     copySpriteCss,
     copySpriteGraphic
-  )
+  ),
+  cleanSpriteEnd
 );
 
 exports.watch = watch;

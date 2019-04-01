@@ -1,0 +1,11 @@
+.column-space {
+    padding-top: 2.5rem;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    @mixin atMedium {
+        padding-top: 0;
+    }
+}

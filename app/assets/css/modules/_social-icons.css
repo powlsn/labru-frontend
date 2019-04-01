@@ -1,17 +1,18 @@
 .social-icons {
   text-align: center;
+  margin-top: 8px;
 
   &__icon {
-    /* color: $darkgreen; */
+    background-color: $darkgreen;
     display: inline-block;
-    margin: 0 5px 5px 5px;
-    width: 33%;
-    height: 32px;
+    /* margin: 0 5px 5px 5px; */
+    width: 56px;
+    height: 56px;
     position: relative;
-    /* border-radius: 12px; */
+    border-radius: 8px;
 
     @mixin atSmall {
-      width: 72px;
+      /* width: 72px; */
       margin: 0 5px;
     }
 
@@ -22,5 +23,9 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+  }
+
+  &__icon:hover {
+    background-color: $grey;
   }
 }

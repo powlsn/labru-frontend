@@ -18,7 +18,8 @@
   <header class="site-header">
     <div class="container">
       <div class="site-header__logo">
-        <img src="./assets/images/svg/logo.svg" alt="Logo"/>
+        <div class="site-header__logo__graphic icon icon--logo">Landhaus Bruckmann</div>
+        <!-- <img src="./assets/images/svg/logo.svg" alt="Logo"/> -->
       </div>
       <div class="site-header__menu-icon">
         <div class="site-header__menu-icon__middle"></div>
@@ -250,52 +251,51 @@
   <footer class="subfooter">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-lg-4 subfooter__column">
-          <div class="subfooter__content-header">
-            <div class="icon icon--map-pin"></div>
-            <h2 class="section-header__title subfooter__title">
-              Anschrift
-            </h2>
-          </div>
-          <div class="subfooter__content-text subfooter__content-text--center">
-            <p class="subfooter__text">Eichengrund 8</p>
-            <p class="subfooter__text">48369, Saerbeck</p>
-            <p class="subfooter__text">+49 888 455 6677</p>
-            <p class="subfooter__text">mail@example.com</p>
+        <div class="col-12 col-lg-4 column-space">
+          <div class="subfooter-item">
+            <div class="subfooter-item__header">
+              <span class="icon icon--map-pin subfooter-item__icon"></span>
+              <h2 class="section-header__title subfooter-item__title">Anschrift</h2>
+            </div>
+            <p class="subfooter-item__text">Eichengrund 8</p>
+            <p class="subfooter-item__text">48369, Saerbeck</p>
+            <p class="subfooter-item__text">+49 888 455 6677</p>
+            <p class="subfooter-item__text">mail@example.com</p>
           </div>
         </div>
-        <div class="col-12 col-lg-4 subfooter__column">
-          <div class="subfooter__content-header">
-            <h2 class="section-header__title subfooter__title"><div class="icon icon--clock"></div> Oeffnungszeiten</h2>
-          </div>
-          <div class="subfooter__content-text">
-            <table class="subfooter__opentime-table">
+        <div class="col-12 col-lg-4 column-space">
+          <div class="subfooter-item">
+            <div class="subfooter-item__header">
+              <span class="icon icon--clock subfooter-item__icon"></span>
+              <h2 class="section-header__title subfooter-item__title">Oeffnungszeiten</h2>
+            </div>
+            <table class="subfooter-item__opentime-table">
               <tbody>
-                <tr class="subfooter__opentime-row">
+                <tr class="subfooter-item__opentime-row">
                   <td>Montag:</td>
                   <td>geschlossen</td>
                 </tr>
-                <tr class="subfooter__opentime-row">
+                <tr class="subfooter-item__opentime-row">
                   <td>Dienstag:</td>
                   <td>14:00 - 18:00 Uhr</td>
                 </tr>
-                <tr class="subfooter__opentime-row">
+                <tr class="subfooter-item__opentime-row">
                   <td>Mittwoch:</td>
                   <td>14:00 - 18:00 Uhr</td>
                 </tr>
-                <tr class="subfooter__opentime-row">
+                <tr class="subfooter-item__opentime-row">
                   <td>Donnerstag:</td>
                   <td>14:00 - 18:00 Uhr</td>
                 </tr>
-                <tr class="subfooter__opentime-row">
+                <tr class="subfooter-item__opentime-row">
                   <td>Freitag:</td>
                   <td>geschlossen</td>
                 </tr>
-                <tr class="subfooter__opentime-row">
+                <tr class="subfooter-item__opentime-row">
                   <td>Samstag:</td>
                   <td>14:00 - 18:00 Uhr</td>
                 </tr>
-                <tr class="subfooter__opentime-row">
+                <tr class="subfooter-item__opentime-row">
                   <td>Sonntag:</td>
                   <td>14:00 - 18:00 Uhr</td>
                 </tr>
@@ -303,12 +303,14 @@
             </table>
           </div>
         </div>
-        <div class="col-12 col-lg-4 subfooter__column">
-          <div class="subfooter__content-header">
-            <span class="icon icon--user-friends"></span>
-            <h2 class="section-header__title subfooter__title">
-              Social Links
-            </h2>
+        <div class="col-12 col-lg-4 column-space">
+          <div class="subfooter-item">
+            <div class="subfooter-item__header">
+              <span class="icon icon--user-friends subfooter-item__icon"></span>
+              <h2 class="section-header__title subfooter-item__title">
+                Social Links
+              </h2>
+            </div>
           </div>
           <div class="social-icons">
             <a href="https://www.instagram.com/landhausbruckmann/?hl=de" target="_blank" class="social-icons__icon">
