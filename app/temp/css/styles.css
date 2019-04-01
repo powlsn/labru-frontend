@@ -1167,8 +1167,12 @@ img {
   }
 
 .icon {
-    background-image: url('../../assets/images/sprite/sprite-a2ceab27.svg');
-}
+        background-image: url('../../assets/images/sprite/sprite-a2ceab27.svg');
+    }
+
+.no-svg .icon {
+        background-image: url('../../assets/images/sprite/sprite-a2ceab27.png');
+    }
 
 .icon--clock {
         width: 34px;

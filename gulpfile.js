@@ -20,7 +20,9 @@ const gulp = require("gulp"),
   webpackconfig = require("./webpack.config.js"),
   webpackstream = require("webpack-stream"),
   svgSprite = require('gulp-svg-sprite'),
-  gulpRename = require('gulp-rename');
+  svg2png = require('gulp-svg2png'),
+  gulpRename = require('gulp-rename'),
+  modernizr = require('gulp-modernizr');
 
 
 const paths = {
@@ -72,6 +74,13 @@ const config = {
   },
   mode: {
     css: {
+      variables: {
+        replaceSVGwithPNG: function () {
+          return function (sprite, render) {
+            return render(sprite).split('.svg').join('.png');
+          }
+        }
+      },
       sprite: 'sprite.svg',
       render: {
         css: {
@@ -93,6 +102,13 @@ function createSprite() {
     .pipe(gulp.dest('./app/temp/sprite'));
 }
 
+function createPNG() {
+  return gulp
+    .src('./app/temp/sprite/css/*.svg')
+    .pipe(svg2png())
+    .pipe(gulp.dest('./app/temp/sprite/css'));
+}
+
 function copySpriteCss() {
   return gulp
     .src('./app/temp/sprite/css/*.css')
@@ -102,7 +118,7 @@ function copySpriteCss() {
 
 function copySpriteGraphic() {
   return gulp
-    .src('./app/temp/sprite/css/**/*.svg')
+    .src('./app/temp/sprite/css/**/*.{svg,png}')
     .pipe(gulp.dest('./app/assets/images/sprite'));
 }
 
@@ -134,6 +150,18 @@ function scripts() {
   );
 }
 
+// modernir Task
+function modernize() {
+  return gulp
+    .src(['./app/assets/css/**/*.css', './app/assets/js/**/*.js'])
+    .pipe(modernizr({
+      "options": [
+        "setClasses"
+      ]
+    }))
+    .pipe(gulp.dest('./app/temp/js/'));
+}
+
 // BrowserSync Reload 
 function browserSyncReload(done) {
   browsersync.reload();
@@ -156,7 +184,7 @@ function browserSync(done) {
 function watchFiles() {
   gulp.watch(paths.sassWatch.src, sassCompile);
   gulp.watch(paths.cssWatch.src, styles);
-  gulp.watch(paths.scriptsWatch.src, scripts);
+  gulp.watch(paths.scriptsWatch.src, gulp.series(modernize, scripts));
   gulp.watch(paths.html.src, browserSyncReload);
 }
 
@@ -164,6 +192,7 @@ const watch = gulp.parallel(watchFiles, browserSync);
 const icons = gulp.series(
   cleanSpriteDir,
   createSprite,
+  createPNG,
   gulp.parallel(
     copySpriteCss,
     copySpriteGraphic
@@ -172,5 +201,5 @@ const icons = gulp.series(
 );
 
 exports.watch = watch;
-exports.createSprite = createSprite;
+exports.modernize = modernize;
 exports.icons = icons;
