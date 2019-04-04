@@ -15,15 +15,37 @@ done: build process "gulp build" (bundle, minify, uglify) output dist
 
 BACKEND:
 1. python 3.6
-2. django 1.11.20
-3. refactor apps (cookiecutter projekt layout)
+2. django 2.1.7
+3. refactoring => cookiecutter projekt layout
 4. Apps ToDo:
-    - aktuelles rework
-    integration: logging, messages framework, image (for the future more usability to write)
-    - gallery
+  hero: (Home)
+    - ehemalig home
+        currently: entry (rename to section)
+      - change db => (
+          section: <varchar>
+          title: <varchar>
+          content: <varchar>
+          image: <file>
+        )
+    - CRUD on admin page
+  aktuelles:
+    - create/edit/delete on admin
+    - insert image (resize image to xy)
+  events:
+    - same as home/hero
+    - CRUD on admin
+  gallery:
     a whole new conzept :-/
-    - app => pages/sections
+    - guest view => show latest 6 gallery's
+    - CRUD at first time on admin, for later usage a separate page that can handle the whole process (CRUD)
+      like jquery file upload but lightweight and selfwritten.
+  opentime:
+    - CRUD on admin
+  kontakt:
+    - support messages framework, and logging
+    - send msg via ajax & json response
+
     rewrite the main app to support the new conzept of the page
         like opentime, entrys, etc.
     rewrite kontakt
-        to support messages framework, and logging
+5. integration: logging, messages framework, image (for the future more usability to write)

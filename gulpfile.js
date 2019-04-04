@@ -181,7 +181,7 @@ function browserSync(done) {
 
 // BUILD TASKS
 function cleanBeginBuild() {
-  return del(['./dist']);
+  return del(['./build']);
 }
 
 function optimizeImages() {
@@ -192,7 +192,7 @@ function optimizeImages() {
       interlaced: true,
       multipass: true
     }))
-    .pipe(gulp.dest('./dist/assets/images'));
+    .pipe(gulp.dest('./build/assets/images'));
 }
 
 function minify() {
@@ -208,7 +208,7 @@ function minify() {
         ]
       }
     ))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./build'));
 }
 
 
