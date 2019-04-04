@@ -32,3 +32,5 @@ dwsync.xml
 # custom
 .babelrc
 package-lock.json
+
+dist/
