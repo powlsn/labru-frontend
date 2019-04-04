@@ -376,22 +376,26 @@ img {
 }
 
 .site-header {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     width: 100%;
+    height: 45px;
     padding: 12px 0;
-    transition: background-color .3s ease-out;
+    background-color: rgba(255,255,255, .75);
+    transition: all .3s ease-out;
 }
 
 .site-header--is-expanded {
-        background-color: rgba(255,255,255, .75);
+        height: 264px;
+        background-color: #ffffff;
     }
 
 @media (min-width: 992px) {
 
 .site-header {
+        height: 60px;
         position: fixed;
-        background-color: rgba(255,255,255, .5)
+        background-color: rgba(255,255,255, .75)
 }
 
 
@@ -399,6 +403,13 @@ img {
             background-color: #ffffff;
             border-bottom: 2px solid #03a87c;
         }
+    }
+
+@media (min-width: 1200px) {
+
+.site-header {
+        height: 60px
+}
     }
 
 @media (min-width: 992px) {
@@ -412,7 +423,7 @@ img {
         position: absolute;
         top: 0;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) scale(0.5);
         transform-origin: 50% 0;
         background-color: #ffffff;
         padding: 20px 30px;
@@ -457,7 +468,7 @@ img {
             left: 0;
             width: 20px;
             height: 3px;
-            background-color: #ffffff;
+            background-color: #373a3c;
             transform-origin: 0 0;
             transition: all .3s ease-out;
         }
@@ -468,7 +479,7 @@ img {
             left: 0;
             width: 20px;
             height: 3px;
-            background-color: #ffffff;
+            background-color: #373a3c;
             transform-origin: 0 0;
             transition: all .3s ease;
         }
@@ -480,7 +491,7 @@ img {
             left: 0;
             width: 20px;
             height: 3px;
-            background-color: #ffffff;
+            background-color: #373a3c;
             transform-origin: 0 100%;
             transition: all .3s ease-out;
         }
@@ -509,18 +520,18 @@ img {
 
 .site-header__menu-content {
         opacity: 0;
-        padding-top: 105px;
+        padding-top: 50px;
         text-align: left;
         position: relative;
         z-index: -10;
-        transform: translateY(-50vh);
+        transform: translateY(-25vh);
         transition: all .3s ease-out;
     }
 
 @media (min-width: 768px) {
 
 .site-header__menu-content {
-            padding-top: 115px
+            padding-top: 50px
     }
     }
 
@@ -897,12 +908,12 @@ img {
 }
 
 .card-img-overlay {
-    background: rgba(55,58,60, .85);
+    background: rgba(55,58,60, .7);
     text-align: center;
     color: #fff;
-    opacity: 0;
+    opacity: 1;
     height: 50%;
-    transform: translateY(0%);
+    transform: translateY(100%);
     transition: all .5s ease;
 }
 
@@ -914,6 +925,14 @@ img {
 .card-img-overlay p {
         font-size: .95rem;
         margin: 0;
+    }
+
+@media (min-width: 992px) {
+
+.card-img-overlay {
+        opacity: 0;
+        transform: translateY(0%)
+}
     }
 
 .card:hover .card-img-overlay {

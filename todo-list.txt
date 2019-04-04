@@ -1,26 +1,21 @@
 FRONTEND:
-done - setup gulp tasks for dev.
+done: gulp setup:
     - https://gulpjs.com/docs/en/getting-started/using-plugins
-
-done - get bootstrap4 to work.
+done: bootstrap4 grid and form
 done: MobileMenu Hamburger icon animation
 done: SmoothScroll
 done: lazyloading
 done: sticky header
 done: Hover on gallery (images) to show total images count and name
-done - get fontawesome to work. also within the package manager
+done: fontawesome in node_modules:
     - https://fontawesome.com/icons?d=gallery&m=free
-done: get icons/sprites/svg task to work
-    - position icons on the right place
-    TODO:
-        - fallback for no-svg supported browsers
-TODO: Aktuelles image responsive (croping)
-TODO: bundle, minify/uglify css, js for build process
+done: icons/sprites/svg/png task "gulp icons"
+done: build process "gulp build" (bundle, minify, uglify) output dist
 
 
 BACKEND:
-1. update to python 3.x
-2. update to django 1.11.x or 2.2? (see webfaction support)
+1. python 3.6
+2. django 1.11.20
 3. refactor apps (cookiecutter projekt layout)
 4. Apps ToDo:
     - aktuelles rework

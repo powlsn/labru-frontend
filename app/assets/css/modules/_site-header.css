@@ -1,23 +1,31 @@
 .site-header {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     width: 100%;
+    height: 45px;
     padding: 12px 0;
-    transition: background-color .3s ease-out;
+    background-color: rgba($white, .75);
+    transition: all .3s ease-out;
     
     &--is-expanded {
-        background-color: rgba($white, .75);
+        height: 264px;
+        background-color: $white;
     }
     
     @mixin atMedium {
+        height: 60px;
         position: fixed;
-        background-color: rgba($white, .5);
+        background-color: rgba($white, .75);
 
 
         &--dark {
             background-color: $white;
             border-bottom: 2px solid $darkgreen;
         }
+    }
+
+    @mixin atLarge {
+        height: 60px;
     }
 
 
@@ -32,7 +40,7 @@
         position: absolute;
         top: 0;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) scale(0.5);
         transform-origin: 50% 0;
         background-color: $white;
         padding: 20px 30px;
@@ -73,7 +81,7 @@
             left: 0;
             width: 20px;
             height: 3px;
-            background-color: $white;
+            background-color: $darkgrey;
             transform-origin: 0 0;
             transition: all .3s ease-out;
         }
@@ -84,7 +92,7 @@
             left: 0;
             width: 20px;
             height: 3px;
-            background-color: $white;
+            background-color: $darkgrey;
             transform-origin: 0 0;
             transition: all .3s ease;
         }
@@ -96,7 +104,7 @@
             left: 0;
             width: 20px;
             height: 3px;
-            background-color: $white;
+            background-color: $darkgrey;
             transform-origin: 0 100%;
             transition: all .3s ease-out;
         }
@@ -126,15 +134,15 @@
 
     &__menu-content {
         opacity: 0;
-        padding-top: 105px;
+        padding-top: 50px;
         text-align: left;
         position: relative;
         z-index: -10;
-        transform: translateY(-50vh);
+        transform: translateY(-25vh);
         transition: all .3s ease-out;
 
         @mixin atSmall {
-            padding-top: 115px;
+            padding-top: 50px;
         }
 
         @mixin atMedium {
