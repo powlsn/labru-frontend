@@ -6,26 +6,26 @@
 
     @mixin atMedium {
         &.lazyloaded {
-            background: url('../../assets/images/event-md.jpg') 50% 0 fixed no-repeat;
+            background: url('../../assets/images/background/event-md.jpg') 50% 0 fixed no-repeat;
             background-size: cover;
         }
     }
 
     @mixin atLarge {
         &.lazyloaded {
-            background: url('../../assets/images/event-lg.jpg') 50% 0 fixed no-repeat;
+            background: url('../../assets/images/background/event-lg.jpg') 50% 0 fixed no-repeat;
             background-size: cover;
         }
     }
 
     &__text-content {
         color: $white;
-    }
-
-    &__text {
-        color: $white;
         line-height: 1.35;
         font-weight: 300;
+
+        & p {
+            text-align: justify;
+        }
 
         @mixin atMedium {
             font-size: 1.125rem;

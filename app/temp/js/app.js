@@ -95,13 +95,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _modules_RevealOnScroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
 /* harmony import */ var _modules_StickyHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
+/* harmony import */ var _modules_ContactAJAX__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7);
+
 
 
 
 
 var mm = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
-var galleryItemScroll = new _modules_RevealOnScroll__WEBPACK_IMPORTED_MODULE_2__["default"](jquery__WEBPACK_IMPORTED_MODULE_0___default()(".card"), "60%");
+var galleryItemScroll = new _modules_RevealOnScroll__WEBPACK_IMPORTED_MODULE_2__["default"](jquery__WEBPACK_IMPORTED_MODULE_0___default()(".card"), "70%");
 var stickyHeader = new _modules_StickyHeader__WEBPACK_IMPORTED_MODULE_3__["default"]();
+var contact = new _modules_ContactAJAX__WEBPACK_IMPORTED_MODULE_4__["default"]();
 
 /***/ }),
 /* 1 */
@@ -11807,6 +11810,100 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+var ContactAjax =
+/*#__PURE__*/
+function () {
+  function ContactAjax() {
+    _classCallCheck(this, ContactAjax);
+
+    this.form = jquery__WEBPACK_IMPORTED_MODULE_0___default()('form');
+    this.events();
+  }
+
+  _createClass(ContactAjax, [{
+    key: "events",
+    value: function events() {
+      var _this = this;
+
+      this.form.submit(function (evt) {
+        evt.preventDefault();
+        var data = jquery__WEBPACK_IMPORTED_MODULE_0___default()(_this.form).serializeArray();
+
+        _this.serializeArrayToJSON(data);
+      });
+    }
+  }, {
+    key: "serializeArrayToJSON",
+    value: function serializeArrayToJSON(data) {
+      console.log(data);
+      var o = {};
+      jquery__WEBPACK_IMPORTED_MODULE_0___default.a.each(data, function (i, v) {
+        if (v['name']) {
+          if (!v['name'].push) {
+            o['name'] = [v['name']];
+          }
+
+          o['name'].push(v['value'] || '');
+        } else {
+          o['name'] = v['value'] || '';
+        }
+      });
+      this.submitForm(o);
+    }
+  }, {
+    key: "submitForm",
+    value: function submitForm(data) {
+      console.log(data);
+    }
+  }, {
+    key: "createPost",
+    value: function createPost() {
+      console.log("create post is working!");
+      jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
+        url: '',
+        type: 'POST',
+        data: {
+          name: jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form-name').val(),
+          email: jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form-email').val(),
+          subject: jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form-subject').val(),
+          message: jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form-message').val()
+        },
+        success: function success(json) {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form-name').val('');
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form-email').val('');
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form-subject').val('');
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('#form-message').val('');
+          console.log(json);
+          console.log("success!");
+        },
+        error: function error(xhr, errmsg, err) {
+          console.log(xhr.status + ": " + xhr.responseText);
+        }
+      });
+    }
+  }]);
+
+  return ContactAjax;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (ContactAjax);
 
 /***/ })
 /******/ ]);

@@ -121,13 +121,13 @@
       <div class="row">
         <div class="col-sm">
           <div class="events__text-content">
-            <p class="events__text">
+            <p>
               Sie haben etwas zu feiern und suchen den richtigen Rahmen?
             </p>
-            <p class="events__text">
+            <p>
               Dann sind Sie bei uns genau richtig!
             </p>
-            <p class="events__text">
+            <p>
               Unser Eventhaus bietet Ihnen die Möglichkeit mit bis zu 60
               Personen zu feiern.
               Ob <em>Hochzeit</em>, <em>Geburtstag</em> oder
@@ -136,11 +136,11 @@
               individuelles Angebot nach Ihren Wünschen zu erstellen um Ihre
               private Feier zu einem unvergesslichem Erlebnis zu machen.
             </p>
-            <p class="events__text">
+            <p>
               Besuchen Sie uns und machen sich selbst ein Bild vom herrlichen
               Ambiente auf unserem Anwesen.
             </p>
-            <p class="events__text">
+            <p>
               Wir freuen uns auf Sie!
             </p>
           </div>
@@ -227,18 +227,18 @@
       </div>
       <div class="row">
         <div class="col-12 col-lg-6">
-          <form>
+          <form id="post-form">
             <div class="form-group">
-              <input type="email" class="form-control" id="form-name" placeholder="Name">
+              <input type="text" name="name" class="form-control" id="form-name" placeholder="Name">
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" id="form-email" placeholder="Email Adresse">
+              <input type="email" name="email" class="form-control" id="form-email" placeholder="Email Adresse">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="form-subject" placeholder="Betreff">
+              <input type="text" name="subject" class="form-control" id="form-subject" placeholder="Betreff">
             </div>
             <div class="form-group">
-              <textarea class="form-control contact__message-box" rows="12" id="form-message" placeholder="Ihre Nachricht"></textarea>
+              <textarea class="form-control contact__message-box" name="message" rows="12" id="form-message" placeholder="Ihre Nachricht"></textarea>
             </div>
             <button type="submit" class="button button--large">Senden</button>
           </form>
