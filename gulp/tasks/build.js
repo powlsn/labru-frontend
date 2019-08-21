@@ -9,7 +9,7 @@ const lineec = require('gulp-line-ending-corrector');
 
 // BUILD
 function cleanBeginBuild() {
-  return del(['./build']);
+  return del(['./docs']);
 }
 
 function optimizeImages() {
@@ -19,7 +19,7 @@ function optimizeImages() {
       interlaced: true,
       multipass: true
     }))
-    .pipe(dest('./build/assets/images'));
+    .pipe(dest('./docs/assets/images'));
 }
 
 function minify() {
@@ -47,7 +47,7 @@ function minify() {
         }
       ]
     }))
-    .pipe(dest('./build'));
+    .pipe(dest('./docs'));
 }
 
 
