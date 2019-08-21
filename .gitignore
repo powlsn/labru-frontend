@@ -11,6 +11,9 @@
 *.sass-cache
 node_modules/
 .tmp/
+temp/
 .vscode/
 dist/
 build/
+
+todos.txt
