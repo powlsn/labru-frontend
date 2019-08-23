@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/powlsn/frontend.git"
+    "url": "https://github.com/powlsn/labru-frontend.git"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
