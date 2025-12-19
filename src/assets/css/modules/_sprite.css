@@ -1,39 +1,47 @@
     .icon {
-        background-image: url('../../assets/images/sprite/sprite-a2ceab27.svg');
+        background-image: url('../../../assets/images/sprite/sprite-a2ceab27.png');
     }
+
     .no-svg .icon {
-        background-image: url('../../assets/images/sprite/sprite-a2ceab27.png');
+        background-image: url('../../../assets/images/sprite/sprite-a2ceab27.png');
     }
+
     .icon--clock {
         width: 34px;
         height: 34px;
         background-position: 0 100%;
     }
+
     .icon--facebook-square {
         width: 54px;
         height: 54px;
         background-position: 0 71.66666666666667%;
     }
+
     .icon--globe-europe {
         width: 54px;
         height: 54px;
         background-position: 41.221374045801525% 71.66666666666667%;
     }
+
     .icon--instagram {
         width: 54px;
         height: 54px;
         background-position: 82.44274809160305% 71.66666666666667%;
     }
+
     .icon--logo {
         width: 185px;
         height: 86px;
         background-position: 0 0;
     }
+
     .icon--map-pin {
         width: 20px;
         height: 34px;
         background-position: 98.18181818181819% 61.42857142857143%;
     }
+
     .icon--user-friends {
         width: 34px;
         height: 34px;

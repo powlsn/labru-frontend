@@ -27,7 +27,7 @@
         @mixin atMedium {
             font-size: 1.125rem;
         }
-        
+
         &--small {
             font-size: 0.875rem;
             float: right;

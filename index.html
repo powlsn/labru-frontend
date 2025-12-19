@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +9,27 @@
   <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 
   <!-- build:css assets/css/vendor.css -->
-  <link rel="stylesheet" href="./temp/css/vendor.css">
+  <!-- <link rel="stylesheet" href="./temp/css/vendor.css"> -->
   <!-- endbuild -->
-  
+
   <!-- build:css assets/css/styles.css -->
-  <link rel="stylesheet" href="./temp/css/styles.css">
+  <!-- <link rel="stylesheet" href="./temp/css/styles.css"> -->
   <!-- endbuild -->
 
   <!-- build:js assets/js/Vendor.js -->
-  <script src="./temp/js/Vendor.js"></script>
+  <!-- <script src="./temp/js/Vendor.js"></script> -->
+  <script src="./src/assets/js/vendor.js"></script>
   <!-- endbuild -->
 </head>
+
 <body>
   <!-- ============= Navbar ============= -->
   <header class="site-header">
     <div class="container">
       <div class="site-header__logo">
-        <div class="site-header__logo__graphic icon icon--logo">Landhaus Bruckmann</div>
+        <svg class="site-header__logo__graphic icon icon--logo">
+          <use xlink:href="#icon-logo"></use>
+        </svg>
       </div>
       <div class="site-header__menu-icon">
         <div class="site-header__menu-icon__middle"></div>
@@ -58,10 +63,14 @@
   <section id="home">
     <div class="large-hero">
       <picture>
-        <source srcset="assets/images/hero-l.jpg 1920w, assets/images/hero-l-hi.jpg 3840w" media="(min-width: 1380px)">
-        <source srcset="assets/images/hero-m.jpg 1380w, assets/images/hero-m-hi.jpg 2760w" media="(min-width: 990px)">
-        <source srcset="assets/images/hero-sm.jpg 990w, assets/images/hero-sm-hi.jpg 1980w" media="(min-width: 640px)">
-        <img srcset="assets/images/hero-sx.jpg 640w, assets/images/hero-sx-hi.jpg 1280w" alt="landhaus bruckmann eventhaus" class="large-hero__image">
+        <source srcset="./src/assets/images/hero-l.jpg 1920w, ./srcassets/images/hero-l-hi.jpg 3840w"
+          media="(min-width: 1380px)">
+        <source srcset="./srcassets/images/hero-m.jpg 1380w, ./srcassets/images/hero-m-hi.jpg 2760w"
+          media="(min-width: 990px)">
+        <source srcset="./srcassets/images/hero-sm.jpg 990w, ./srcassets/images/hero-sm-hi.jpg 1980w"
+          media="(min-width: 640px)">
+        <img srcset="./srcassets/images/hero-sx.jpg 640w, ./srcassets/images/hero-sx-hi.jpg 1280w"
+          alt="landhaus bruckmann eventhaus" class="large-hero__image">
       </picture>
 
       <div class="large-hero__text-content">
@@ -86,19 +95,19 @@
     <div class="container aktuelles">
       <div class="row">
         <div class="col-sm-12 col-md-6">
-          <img src="./assets/images/news480x320.jpg" alt="headline for awesome news"/>
+          <img src="./src/assets/images/news480x320.jpg" alt="headline for awesome news" />
         </div>
         <div class="col-sm-12 col-md-6">
-            <h2 class="aktuelles__subtitle">Headline for awesome News</h2>
-          <p class="text-justify aktuelles__content-text" >
-            Lorem Ipsum is simply dummy text of the printing and typesetting 
-            industry. Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer took a galley 
-            of type and scrambled it to make a type specimen book. It has 
-            survived not only five centuries, but also the leap into electronic 
-            typesetting, remaining essentially unchanged. It was popularised 
-            in the 1960s with the release of Letraset sheets containing Lorem 
-            Ipsum passages, and more recently with desktop publishing 
+          <h2 class="aktuelles__subtitle">Headline for awesome News</h2>
+          <p class="text-justify aktuelles__content-text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s, when an unknown printer took a galley
+            of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised
+            in the 1960s with the release of Letraset sheets containing Lorem
+            Ipsum passages, and more recently with desktop publishing
             software like Aldus PageMaker including versions of Lorem Ipsum.
           </p>
           <p class="aktuelles__content-text  aktuelles__content-text--small">Saturday, 17th August</p>
@@ -110,7 +119,7 @@
   <!-- Ende Aktuelles -->
 
   <!-- ============= Events ============= -->
-  <section id="events" class="events page-section lazyload" data-nav-link="#events-link">
+  <section id="events" class="events page-section lazyloaded" data-nav-link="#events-link">
     <div class="container">
       <div class="section-header">
         <h1 class="
@@ -160,8 +169,8 @@
       </div>
       <div class="card-columns">
         <div class="card">
-          <a href="./assets/images/gallery/gallery1.jpg">
-            <img class="lazyload" data-src="./assets/images/gallery/gallery1.jpg" />
+          <a href="./src/assets/images/gallery/gallery1.jpg">
+            <img class="lazyload" src="./src/assets/images/gallery/gallery1.jpg" />
             <div class="card-img-overlay">
               <h2>Galerie Titel Text</h2>
               <p>(num) bilder</p>
@@ -169,8 +178,8 @@
           </a>
         </div>
         <div class="card">
-          <a href="./assets/images/gallery/gallery2.jpg">
-            <img class="lazyload" data-src="./assets/images/gallery/gallery2.jpg" />
+          <a href="./src/assets/images/gallery/gallery2.jpg">
+            <img class="lazyload" src="./src/assets/images/gallery/gallery2.jpg" />
             <div class="card-img-overlay">
               <h2>Galerie Titel Text</h2>
               <p>(num) bilder</p>
@@ -178,8 +187,8 @@
           </a>
         </div>
         <div class="card">
-          <a href="./assets/images/gallery/gallery3.jpg">
-            <img class="lazyload" data-src="./assets/images/gallery/gallery3.jpg" />
+          <a href="./src/assets/images/gallery/gallery3.jpg">
+            <img class="lazyload" src="./src/assets/images/gallery/gallery3.jpg" />
             <div class="card-img-overlay">
               <h2>Galerie Titel Text</h2>
               <p>(num) bilder</p>
@@ -187,8 +196,8 @@
           </a>
         </div>
         <div class="card">
-          <a href="./assets/images/gallery/gallery4.jpg">
-            <img class="lazyload" data-src="./assets/images/gallery/gallery4.jpg" />
+          <a href="./src/assets/images/gallery/gallery4.jpg">
+            <img class="lazyload" src="./src/assets/images/gallery/gallery4.jpg" />
             <div class="card-img-overlay">
               <h2>Galerie Titel Text</h2>
               <p>(num) bilder</p>
@@ -196,8 +205,8 @@
           </a>
         </div>
         <div class="card">
-          <a href="./assets/images/gallery/gallery5.jpg">
-            <img class="lazyload" data-src="./assets/images/gallery/gallery5.jpg" />
+          <a href="./src/assets/images/gallery/gallery5.jpg">
+            <img class="lazyload" src="./src/assets/images/gallery/gallery5.jpg" />
             <div class="card-img-overlay">
               <h2>Galerie Titel Text</h2>
               <p>(num) bilder</p>
@@ -206,8 +215,8 @@
           </a>
         </div>
         <div class="card">
-          <a href="./assets/images/gallery/gallery6.jpg">
-            <img class="lazyload" data-src="./assets/images/gallery/gallery6.jpg" />
+          <a href="./src/assets/images/gallery/gallery6.jpg">
+            <img class="lazyload" src="./src/assets/images/gallery/gallery6.jpg" />
             <div class="card-img-overlay">
               <h2>Galerie Titel Text</h2>
               <p>(num) bilder</p>
@@ -220,7 +229,7 @@
   <!-- Ende Galerie -->
 
   <!-- ============= Kontakt ============= -->
-  <section id="contact" class="contact page-section lazyload" data-nav-link="#contact-link">
+  <section id="contact" class="contact page-section lazyloaded" data-nav-link="#contact-link">
     <div class="container contact__text-content">
       <div class="section-header">
         <h2 class="section-header__title section-header__title--fs2 section-header__title--white">Schreiben Sie uns</h2>
@@ -238,14 +247,15 @@
               <input type="text" name="subject" class="form-control" id="form-subject" placeholder="Betreff">
             </div>
             <div class="form-group">
-              <textarea class="form-control contact__message-box" name="message" rows="12" id="form-message" placeholder="Ihre Nachricht"></textarea>
+              <textarea class="form-control contact__message-box" name="message" rows="12" id="form-message"
+                placeholder="Ihre Nachricht"></textarea>
             </div>
             <button type="submit" class="button button--large">Senden</button>
           </form>
         </div>
         <div class="col-12 col-lg-6">
           <div class="contact__embed-container">
-              <div id="map" class="contact__google-map"></div>
+            <div id="map" class="contact__google-map"></div>
           </div>
         </div>
       </div>
@@ -259,7 +269,10 @@
         <div class="col-12 col-lg-4 column-space">
           <div class="subfooter-item">
             <div class="subfooter-item__header">
-              <span class="icon icon--map-pin subfooter-item__icon"></span>
+              <!-- <span class="icon icon--map-pin subfooter-item__icon"></span> -->
+              <svg class="icon icon--map-pin subfooter-item__icon">
+                <use xlink:href="#icon-map-pin"></use>
+              </svg>
               <h2 class="section-header__title subfooter-item__title">Anschrift</h2>
             </div>
             <p class="subfooter-item__text">Eichengrund 8</p>
@@ -271,7 +284,10 @@
         <div class="col-12 col-lg-4 column-space">
           <div class="subfooter-item">
             <div class="subfooter-item__header">
-              <span class="icon icon--clock subfooter-item__icon"></span>
+              <!-- <span class="icon icon--clock subfooter-item__icon"></span> -->
+              <svg class="icon icon--clock subfooter-item__icon">
+                <use xlink:href="#icon-clock"></use>
+              </svg>
               <h2 class="section-header__title subfooter-item__title">Oeffnungszeiten</h2>
             </div>
             <table class="subfooter-item__opentime-table">
@@ -311,7 +327,10 @@
         <div class="col-12 col-lg-4 column-space">
           <div class="subfooter-item">
             <div class="subfooter-item__header">
-              <span class="icon icon--user-friends subfooter-item__icon"></span>
+              <!-- <span class="icon icon--user-friends subfooter-item__icon"></span> -->
+              <svg class="icon icon--user-friends subfooter-item__icon">
+                <use xlink:href="#icon--user-friends"></use>
+              </svg>
               <h2 class="section-header__title subfooter-item__title">
                 Social Links
               </h2>
@@ -319,13 +338,22 @@
           </div>
           <div class="social-icons">
             <a href="https://www.instagram.com/landhausbruckmann/?hl=de" target="_blank" class="social-icons__icon">
-              <span class="icon icon--instagram"></span>
+              <!-- <span class="icon icon--instagram"></span> -->
+              <svg class="icon icon--instagram">
+                <use xlink:href="#icon--instagram"></use>
+              </svg>
             </a>
             <a href="https://www.facebook.com/landhaus.bruckmann/" target="_blank" class="social-icons__icon">
-              <span class="icon icon--facebook-square"></span>
+              <!-- <span class="icon icon--facebook-square"></span> -->
+              <svg class="icon icon--facebook-square">
+                <use xlink:href="#icon--instagram"></use>
+              </svg>
             </a>
             <a href="https://goo.gl/maps/wFtJs7Xn1y22" target="_blank" class="social-icons__icon">
-              <span class="icon icon--globe-europe"></span>
+              <!-- <span class="icon icon--globe-europe"></span> -->
+              <svg class="icon icon--globe-europe">
+                <use xlink:href="#icon--globe-europe"></use>
+              </svg>
             </a>
           </div>
         </div>
@@ -355,8 +383,8 @@
 
   <script>
     function initMap() {
-      
-      var lat_lng = {lat: 52.168822, lng: 7.631604 };
+
+      var lat_lng = { lat: 52.168822, lng: 7.631604 };
       var container = document.getElementById('map');
       var map = new google.maps.Map(container, {
         zoom: 16,
@@ -367,11 +395,13 @@
     }
   </script>
 
-<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmKX4j0ayBS3l_V8BzQUmw2AdQlW3Qov8&callback=initMap">
-</script>
-<!-- build:js assets/js/App.js -->
-<script src="./temp/js/App.js"></script>
-<!-- endbuild -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmKX4j0ayBS3l_V8BzQUmw2AdQlW3Qov8&callback=initMap">
+    </script>
+  <!-- build:js assets/js/App.js -->
+  <!-- <script src="./temp/js/App.js"></script> -->
+  <!-- endbuild -->
+  <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
