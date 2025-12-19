@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 import legacy from '@vitejs/plugin-legacy';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
@@ -23,6 +24,7 @@ export default defineConfig({
   root: '.', // Oder 'src' falls dein Code dort liegt
 
   plugins: [
+    vue(), // Vue Plugin an erster Stelle
     globalLibrariesPlugin(),
     legacy({
       targets: ['defaults', 'not IE 11']

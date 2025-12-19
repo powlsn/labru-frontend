@@ -5,6 +5,6 @@ export default {
     'postcss-simple-vars': {},
     'postcss-nested': {},
     'postcss-hexrgba': {},
-    'autoprefixer': {}
+    // 'autoprefixer': {}
   }
 };

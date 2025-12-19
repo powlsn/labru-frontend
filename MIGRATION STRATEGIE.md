@@ -41,6 +41,7 @@ import './styles/main.scss';
       <!-- Alte jQuery-Bereiche können erstmal als 5. HTML für Vue anpassen:index.htmlInteraktives Artefakt ∙ Version 3 Phase 2: Komponentenstruktur aufbauen
 ```
 # Erstelle eine sinnvolle Ordnerstruktur:
+```
 src/
 ├── app.js              # Vue Entry Point
 ├── App.vue             # Root Component
@@ -60,6 +61,7 @@ src/
 └── styles/
     ├── main.scss
     └── modules/
+```
 
 # Phase 3: Beispiel-Komponenten
 Icon-Komponente (SVG Sprites in Vue):src/components/shared/Icon.vueCode 
